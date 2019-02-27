@@ -1,0 +1,424 @@
+body {
+    background-color: #e8e8e8;
+}
+nav {
+    z-index: 99999;
+    background-color: #0077ff;
+    box-shadow: 0 8px 6px -6px grey;
+}
+.nav-item {
+    margin-right: 20px;
+}
+.navbar-brand {
+    margin-left: 4%;
+    font-size: 21pt;
+    font-weight: 500;
+}
+.nav-item a {
+    color: white;
+    font-size: 15pt;
+    font-weight: 500;
+}
+.contain {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+}
+.profile {
+    width: 95%;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    padding: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.photo {
+    width: 580px;
+    height: auto;
+    vertical-align: middle;
+}
+.photo img {
+    margin-top: 35px;
+}
+.photo div {
+    display: inline-block;
+    position: relative;
+    top: 60px;
+    margin-left: 20px;
+}
+.photo div h3 {
+    position: relative;
+    left: 10px;
+    font-weight: 400;
+    font-size: 18pt;
+}
+.batas {
+    width: 2px;
+    height: 100%;
+    background-color: rgb(66, 66, 66);
+}
+.bio {
+    width: 580px;
+    height: 190px;
+    padding: 40px;
+}
+.bio h4 {
+    font-weight: 400;
+}
+.weight-profil {
+    font-weight: 600;
+}
+.weight-menu {
+    font-weight: 700;
+    font-size: 27pt;
+}
+.sub-data p, .sub-raport p {
+    font-size: 14pt;
+}
+.profile .edit {
+    position: relative;
+    margin-left: 94%;
+    color: white;
+    bottom: 20px;
+}
+.profile .hapus {
+    position: relative;
+    margin-left: 85%;
+    color: white;
+    bottom: 56px;
+}
+.contains {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-evenly;
+}
+.notif {
+    width: 20%;
+    min-height: 900px;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.menu {
+    width: 73%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.raport {
+    width: 100%;
+    height: auto;
+    background: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    color: #2a2a2a;
+}
+.raport h2 {
+    position: relative;
+    top: 15px;
+}
+.raport p {
+    position: relative;
+    top: 15px;
+}
+.raport h2, .raport p {
+    text-decoration: none;
+    color: #2a2a2a;
+}
+.gbr-buku {
+    position: relative;
+    top: 25px;
+}
+.data {
+    width: 48%;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    margin-bottom: 30px;
+}
+.sub-data h2, .sub-data p {
+    color: #2a2a2a;
+}
+
+.agenda {
+    width: 48%;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    margin-bottom: 30px;
+}
+.kontak {
+    width: 48%;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+}
+.service {
+    width: 48%;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 23px -1px rgba(0,0,0,0.6);
+}
+footer {
+    height: auto;
+	background-color: #272727;
+	display: flex;
+  	flex-flow: row wrap;
+  	padding-top: 50px;
+    justify-content: center;
+    margin-top: 100px;
+}
+.konten1{
+	float: left;
+	width: 300px;
+	height: 350px;
+}
+.konten1 h3{
+	font-weight: 700;
+	margin-left: 20px;
+	color: #fff;
+}
+.line{
+	background-color: #2196f3;
+	height: 74px;
+	width: 5px;
+	margin-right: 5px;
+	float: left;
+}
+.konten1 p{
+	color: #fff;
+	margin-top: 20px;
+}
+.konten2{
+	float: left;
+	width: 300px;
+	height: 350px;
+	color: #fff;
+}
+.konten2 li{
+	list-style: none;
+	text-decoration: none;
+}
+.konten2 a{
+	text-decoration: none;
+	list-style: none;
+	color: #fff;
+	transition: 0.2s;
+}
+.konten2 a:hover {
+	text-decoration: none;
+	list-style: none;
+	color: #2196f3;
+}
+.line2{
+	float: left;
+	width: 90%;
+	height: 4px;
+	background-color: #333333;
+	margin-bottom: 10px;
+}
+.l-line{
+	width: 70px;
+	height: 4px;
+	float: left;
+	background-color: #2196f3;
+}
+.konten3 li{
+	list-style: none;
+	text-decoration: none;
+}
+.konten3 li a i{
+	color: #fff;
+	font-size: 25px;
+	margin-top: 20px;
+	float: left;
+	transition: 0.2s;
+	list-style: none;
+	background-color: #333333;
+	text-decoration: none;
+}
+.konten3{
+	float: left;
+	width: 300px;
+	height: 350px;
+	color: #fff;
+	font-family: arial;
+}
+.konten3 .t:hover{
+	background: #fff;
+	color: #55acee;
+}
+.konten3 .f:hover{
+	background: #fff;
+	color: #3b5999;
+}
+.konten3 .i:hover{
+	background: #fff;
+	color: #4870FF;
+}
+.konten3 .y:hover{
+	background: #fff;
+	color: red;
+}
+.konten4{
+	float: left;
+	width: 300px;
+	height: 350px;
+	color: #fff;
+}
+.konten4 p{
+	float: left;
+}
+.footer-bottom{
+	width: 100%;
+	height: auto;
+	background-color: #171717;
+}
+.footer-bottom p{
+	text-align: center;
+	color: #dfdfdf;
+	line-height: 60px;
+	font-size: 17pt;
+	font-weight: 300;
+	margin: 0;
+}
+@media screen and (max-width: 1300px) {
+    .bio {
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    .photo {
+        width: 100%;
+    }
+    .batas {
+        display: none;
+    }
+}
+@media screen and (max-width: 992px) {
+    .raport {
+        margin-bottom: 30px;
+    }
+    .data {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .agenda {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .kontak {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .service {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 1317px) {
+    .profile .bio {
+        margin-bottom: 30px;
+    }
+    .photo img {
+        margin-top: 10px;
+    }
+    .photo div {
+        display: inline-block;
+        position: relative;
+        top: 35px;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .notif h2 {
+        font-size: 19pt;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        width: 95%;
+    }
+    .notif {
+        width: 95%;
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width: 651px) {
+    .profile .bio {
+        margin-bottom: 60px;
+    }
+}
+
+@media screen and (max-width: 623px) {
+    .bio h4 {
+        font-size: 12pt;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .photo div {
+        margin-left: -10px;
+        top: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 992px) {
+    .putih {
+        background-color: white !important;
+        border-radius: 10px !important;
+    } 
+    ul {
+        width: 100% !important;
+        padding-left: 5% !important;
+    }
+    .nav-item a {
+        text-align: center !important;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        color: #0077ff !important;
+    }
+}
+@media screen and (max-width: 360px) {
+    .navbar-brand {
+        position: relative;
+        left: -5px;
+        margin-left: 0px;
+        margin-right: 0px;
+        font-size: 15pt;
+    }
+}

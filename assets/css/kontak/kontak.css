@@ -1,0 +1,365 @@
+body {
+    background-color: #e8e8e8;
+}
+nav {
+    z-index: 99999;
+    background-color: #0077ff;
+    box-shadow: 0 8px 6px -6px grey;
+}
+.nav-item {
+    margin-right: 20px;
+}
+.navbar-brand {
+    margin-left: 4%;
+    font-size: 21pt;
+    font-weight: 500;
+}
+.nav-item a {
+    color: white;
+    font-size: 15pt;
+    font-weight: 500;
+}
+.kemasan {
+    height: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly; 
+}
+.pembungkus {
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding-bottom: 40px;
+}
+.pembungkus h2 {
+    font-weight: 500;
+    font-size: 22pt;
+}
+.profile {
+    width: 600px;
+    height: 270px;
+    background-color: white;
+    box-shadow: 0px 3px 15px rgb(214, 214, 214);
+    padding: 5px 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    -webkit-box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.6);
+    border-radius: 5px;
+}
+.nama {
+    margin-top: 90px;
+    font-size: 25pt !important;
+}
+.kontac {
+    padding-top: 65px;
+}
+.edit {
+    margin-top: 90px !important;
+}
+.nomor-pemilik {
+    margin-top: 50px;
+    font-size: 27pt;
+    font-weight: 700; 
+}
+.lebarop {
+    width: 100% !important;
+}
+.photo {
+    width: 200px;
+    height: 230px;
+}
+span {
+    font-size: 20pt;
+    font-weight: 500;
+}
+.nomor {
+    width: 350px;
+    height: 230px;
+    position: relative;
+    top: 70px;
+}
+.jarak {
+    position: relative;
+    top: -30px;
+    left: 250px;
+}
+.bungkus {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.lebar-cari {
+    width: 89% !important;
+}
+.walmur {
+    width: 450px;
+    height: 200px;
+    background-color: white;
+    box-shadow: 0px 3px 15px rgb(214, 214, 214);
+}
+footer {
+    height: auto;
+	background-color: #272727;
+	display: flex;
+  	flex-flow: row wrap;
+  	padding-top: 50px;
+    justify-content: center;
+    margin-top: 50px;
+}
+.konten1{
+	float: left;
+	width: 300px;
+	height: 350px;
+}
+.konten1 h3{
+	font-weight: 700;
+	margin-left: 20px;
+	color: #fff;
+}
+.line{
+	background-color: #2196f3;
+	height: 74px;
+	width: 5px;
+	margin-right: 5px;
+	float: left;
+}
+.konten1 p{
+	color: #fff;
+	margin-top: 20px;
+}
+.konten2{
+	float: left;
+	width: 300px;
+	height: 350px;
+	color: #fff;
+}
+.konten2 li{
+	list-style: none;
+	text-decoration: none;
+}
+.konten2 a{
+	text-decoration: none;
+	list-style: none;
+	color: #fff;
+	transition: 0.2s;
+}
+.konten2 a:hover {
+	text-decoration: none;
+	list-style: none;
+	color: #2196f3;
+}
+.line2{
+	float: left;
+	width: 90%;
+	height: 4px;
+	background-color: #333333;
+	margin-bottom: 10px;
+}
+.l-line{
+	width: 70px;
+	height: 4px;
+	float: left;
+	background-color: #2196f3;
+}
+.konten3 li{
+	list-style: none;
+	text-decoration: none;
+}
+.konten3 li a i{
+	color: #fff;
+	font-size: 25px;
+	margin-top: 20px;
+	float: left;
+	transition: 0.2s;
+	list-style: none;
+	background-color: #333333;
+	text-decoration: none;
+}
+.konten3{
+	float: left;
+	width: 300px;
+	height: 350px;
+	color: #fff;
+	font-family: arial;
+}
+.konten3 .t:hover{
+	background: #fff;
+	color: #55acee;
+}
+.konten3 .f:hover{
+	background: #fff;
+	color: #3b5999;
+}
+.konten3 .i:hover{
+	background: #fff;
+	color: #4870FF;
+}
+.konten3 .y:hover{
+	background: #fff;
+	color: red;
+}
+.konten4{
+	float: left;
+	width: 300px;
+	height: 350px;
+	color: #fff;
+}
+.konten4 p{
+	float: left;
+}
+.footer-bottom{
+	width: 100%;
+	height: auto;
+	background-color: #171717;
+}
+.footer-bottom p{
+	text-align: center;
+	color: #dfdfdf;
+	line-height: 60px;
+	font-size: 17pt;
+	font-weight: 300;
+	margin: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .putih {
+        background-color: white !important;
+        border-radius: 10px !important;
+    } 
+    ul {
+        width: 100% !important;
+        padding-left: 5% !important;
+    }
+    .nav-item a {
+        text-align: center !important;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        color: #0077ff !important;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .profile {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+    .jarak {
+        top: 180px;
+        left: 90px;
+        height: 40px !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .tombol {
+        margin-top: 10px;
+        width: 89%;
+    }
+    .kemasan {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .profile {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .jarak {
+        left: 70px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .jarak {
+        left: 55px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .jarak {
+        left: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .jarak {
+        left: 10px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .jarak {
+        top: -40px;
+        left: 140px;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .photo {
+        width: auto;
+    }
+    .nomor {
+        width: auto;
+    }
+    .jarak {
+        left: 120px;
+        width: 55%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .jarak {
+        left: 105px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile {
+        height: 450px;
+    }
+    .jarak {
+        left: 0px;
+        width: 100%;
+        top: -70px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .navbar-brand {
+        position: relative;
+        left: -5px;
+        margin-left: 0px;
+        margin-right: 0px;
+        font-size: 15pt;
+    }
+    .kemasan {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    span {
+        font-size: 17pt;
+    }
+    .pembungkus {
+        padding: 0px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    span {
+        font-size: 13pt;
+    }
+}

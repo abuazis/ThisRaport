@@ -1,0 +1,239 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+header {
+    width: 100%;
+    min-height: 600px;
+    background: linear-gradient(rgba(0,119,255,0.75), rgba(0,177,255,0.75)), url('../../img/header.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 0;
+}
+#features {
+    width: 100%;
+    min-height: 480px;
+    background-color: #e9e9e9;
+}
+#testimonial {
+    width: 100%;
+    min-height: 580px;
+    background-color: #e1e1e1;
+}
+#join {
+    width: 100%;
+    min-height: 380px;
+    background-color: #e9e9e9;
+}
+footer {
+    width: 100%;
+    min-height: 360px;
+    background-color: #272727;
+}
+/* ========================================================================================== */
+body {
+    background: rgba(0,119,255,0.75);
+    background-size: cover;
+}
+nav {
+    z-index: 99999;
+    position: fixed !important;
+    transition-duration: 1s;
+}
+.nav-item {
+    margin-right: 20px;
+}
+.navbar-brand {
+    margin-left: 5.5%;
+    font-size: 21pt;
+    font-weight: 500;
+}
+.nav-item a {
+    color: white;
+    font-size: 15pt;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 992px) {
+    .putih {
+        background-color: white !important;
+        border-radius: 10px !important;
+    } 
+    ul {
+        width: 100% !important;
+        padding-left: 5% !important;
+    }
+    .nav-item a {
+        text-align: center !important;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        color: #0077ff !important;
+    }
+}
+
+.face {
+    position: absolute;
+    top: 140px;
+    margin-left: 7%;
+    width: 600px;
+}
+.face h2 {
+    color: white;
+    font-weight: 600;
+    font-size: 45pt;
+    margin: 0px;
+}
+.face p {
+    color: white;
+    font-weight: 500;
+    font-size: 18pt;
+    margin: 0px;
+}
+.face button {
+    width: 180px;
+    height: 45px;
+    border: none;
+    font-size: 16pt;
+    font-weight: 600;
+    position: relative;
+    top: 60px;
+    margin-right: 20px;
+    color: white;
+    box-shadow: 0px 0px 7px #535353;
+}
+.face .hijau {
+    background-color: #24D11B;
+}
+.face .merah {
+    background-color: #F24349;
+}
+.tombol {
+    font-weight: 700;
+}
+.margix {
+    margin-top: 70px;
+}
+.ungu {
+    background-color: indigo !important;
+}
+.noline {
+    text-decoration: none !important;
+}
+@media screen and (max-width: 650px) {
+    .face {
+        width: 450px;
+    }
+    .face h2 {
+        font-size: 38pt;
+    }
+}
+@media screen and (max-width: 627px) {
+    .fitur {
+        width: 100% !important;
+    }
+}
+@media screen and (max-width: 530px) {
+    .face {
+        width: 330px;
+        margin-left: 80px;
+    }
+    .face h2 {
+        font-size: 30pt;
+    }
+    .face p {
+        font-size: 15pt;
+    }
+    .face .hijau {
+        width: 100%;
+        margin-bottom: 20px;
+        background-color: #24D11B;
+    }
+    .face .merah {
+        width: 100%;
+        background-color: #F24349;
+    }
+}
+@media screen and (max-width: 500px) {
+    .face {
+        margin-left: 70px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .face {
+        margin-left: 45px;
+    }
+}
+@media screen and (max-width: 397px) {
+    .navbar-brand {
+        margin-left: 5px !important;
+        margin-right: 0px !important;
+    }
+    .face {
+        margin-left: 6%;
+    }
+}
+@media screen and (max-width: 377px) {
+    nav {
+        padding-left: 0 !important;
+    }
+    .navbar-brand {
+        font-size: 20pt;
+    }
+    .face .hijau {
+        width: 90%;
+    }
+    .face .merah {
+        width: 90%;
+    }
+    .face h2 {
+        font-size: 25pt;
+    }
+    .face p {
+        font-size: 10pt;
+        display: inline-block;
+    }
+}
+@media screen and (max-width: 360px) {
+    .navbar-brand {
+        position: relative;
+        left: -5px;
+        margin-left: 0px;
+        margin-right: 0px;
+        font-size: 18pt;
+    }
+    .face {
+        margin-left: 6.5%;
+    }
+    .putih{
+        margin-left: 5%;
+    }
+}
+@media screen and (max-width: 339px) {
+    .navbar-brand {
+        font-size: 18pt;
+    }
+}
+@media screen and (max-width: 320px) {
+    .face p {
+        display: none;
+    }
+    .face .hijau {
+        margin-right: 0;
+        width: 80%;
+    }
+    .face .merah {
+        margin-right: 0;
+        width: 80%;
+    }
+    .navbar-brand img{
+        display: none !important;
+    }
+    .navbar-brand {
+        margin-left: 10% !important;
+    }
+}
+
+/* ===========================HOVER============================== */

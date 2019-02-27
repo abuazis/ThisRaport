@@ -1,0 +1,73 @@
+body {
+    overflow-x: hidden !important;
+}
+.container {
+    height: 650px !important;
+}
+.buat-kelas {
+    width: 550px;
+    height: 600px;
+    background-color: rgba(36, 36, 36, 0.7);
+    margin-top: 25px;
+    border-radius: 10px;
+    padding: 0px 20px;
+}
+.judul-kelas {
+    position: relative;
+    margin-top: 20px;
+    background-color: #8A14D9 !important;
+}
+.judul-kelas img {
+    margin-top: 20px;
+}
+.judul-kelas {
+    position: relative;
+    top: 8px;
+}
+.raport {
+    margin: 0;
+}
+form {
+    position: relative;
+    top: 210px;
+}
+.buat-kelas form p
+{
+	margin: 0;
+	padding: 0;
+    font-weight: 600;
+    font-size: 14pt;
+    color: #fff;
+    text-align: left;
+    margin-left: 27px;
+}
+.buat-kelas input
+{
+	width: 90%;
+	margin-bottom: 20px;
+}
+.buat-kelas input[type="text"],
+.buat-kelas input[type="password"]
+{
+	border: none;
+	border-bottom: 2px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+}
+.buat-kelas input[type="submit"] {
+    position: relative;
+    top: 20px;
+	border: none;
+	outline: none;
+	height: 40px;
+	color: #fff;
+    font-size: 22px;
+    font-weight: 600px;
+    background-color: #8A14D9 !important;
+	cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 0px 16px rgb(59, 59, 59);
+}

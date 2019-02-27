@@ -1,0 +1,26 @@
+.nav-item {
+    margin-right: 20px;
+}
+.navbar-brand {
+    margin-left: 4%;
+    font-size: 21pt;
+    font-weight: 500;
+}
+.nav-item a {
+    color: white;
+    font-size: 15pt;
+    font-weight: 500;
+}
+.marg-atas {
+    margin-top: 100px;
+}
+.top-mr {
+    position: relative;
+    top: 10px;
+}
+label {
+    font-size: 13.5pt !important;
+}
+.weight-field {
+    font-weight: 600 !important;
+}
