@@ -61,13 +61,13 @@
                     </div>
                     <div class="col-md-3">
                         <h2 class="nama"><?= $self['nama_pemilik']; ?></h2>
-                        <h5>Walikelas <?= $kelas['nama_kelas']; ?></h5>
+                        <h5>Walimurid Dari <b><br><?= $self['nama_anak']; ?></b></h5>
                     </div>
                     <hr>
                     <div class="col-md-6 kontac">
                         <span class="nomor-pemilik text-success"><img class="mr-2" src="<?= base_url(); ?>assets/img/wa-black.png" width="48">Whatsapp: <?= $self['nomor_wa']; ?></span><br>
                         <span class="nomor-pemilik "><img class="mr-2" src="<?= base_url(); ?>assets/img/line-black.png" width="60">LINE: <?= $self['id_line']; ?></span>
-                        <a href="<?= site_url('walikelas/kontak/aksi'); ?>" class="btn btn-primary text-light float-right edit" > Aksi <i class="fas fa-edit"></i></a>
+                        <a href="<?= site_url('walimurid/kontak/aksi'); ?>" class="btn btn-primary text-light float-right edit" > Aksi <i class="fas fa-edit"></i></a>
                     </div>
                 </div>
                 <form action="" method="post" class="mt-4 form-inline">
@@ -75,8 +75,21 @@
                     <button type="submit" class="btn btn-primary btn-lg ml-2 tombol">Search <i class="fa fa-search" aria-hidden="true"></i></button>
                 </form>
                 <div class="bungkus mt-4">
+                    <div class="profile mr-2 mb-3">
+                            <div class="photo">
+                                <center>
+                                    <h4 class="mt-3 mb-4"><?= $walas['nama_pemilik']; ?></h4>
+                                    <img src="<?= base_url().$walas['foto']; ?>" width="140">
+                                </center>
+                            </div>
+                            <div class="nomor">
+                                <p>Walikelas <?= $kelas['nama_kelas']; ?></p>
+                                <a href=""><span class="float-left ml-5"><img src="<?= base_url(); ?>assets/img/wa-black.png" width="36"> <?= $walas['nomor_wa']; ?></span><br></a>
+                                <a href=""><span class="float-left ml-5"><img src="<?= base_url(); ?>assets/img/line-black.png" width="45"> <?= $walas['id_line']; ?></span></a>
+                            </div>
+                        </div>
                     <?php foreach($walimurid as $walmur) : ?>
-                        <div class="profile mr-2">
+                        <div class="profile mr-2 mb-5">
                             <div class="photo">
                                 <center>
                                     <h4 class="mt-3 mb-4"><?= $walmur['nama_pemilik']; ?></h4>

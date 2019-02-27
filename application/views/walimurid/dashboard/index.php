@@ -116,7 +116,7 @@
                     </div>
                     <div class="kontak">
                         <center>
-                        <a href=""><img src="<?= base_url(); ?>assets/img/chat.png" width="220" class="mt-2"></a>
+                        <a href="<?= site_url('walimurid/kontak'); ?>"><img src="<?= base_url(); ?>assets/img/chat.png" width="220" class="mt-2"></a>
                             <div class="sub-data">
                                 <h2 class="mt-2 weight-menu">Kontak Walimurid</h2>
                                 <p>Jadwalkan pertemuan anda

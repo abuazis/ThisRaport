@@ -9,7 +9,8 @@ class Kontak_Model extends CI_Model {
             "nama_pemilik" => $this->input->post('nama', true),
             "status" => $this->session->userdata('level', true),
             "nomor_wa" => $this->input->post('wa', true),
-            "id_line" => $this->input->post('line', true)
+            "id_line" => $this->input->post('line', true),
+            "nama_anak" => $this->input->post('anak', true)
         ];
 
         $config['upload_path'] = './uploads/';
@@ -20,19 +21,19 @@ class Kontak_Model extends CI_Model {
 
         if( ! $this->upload->do_upload('foto') ) {
             $error = ['error' => $this->upload->display_errors()];
-            $this->load->view('walikelas/kontak/aksi', $error);
+            $this->load->view('walimurid/kontak/aksi', $error);
         } else {
             $upload_data = $this->upload->data();
             $file_name = $upload_data['file_name'];
             $data['foto'] = 'uploads/'.$file_name;
             if($this->db->insert('tbl_kontak', $data)) {
-                redirect('walikelas/kontak');
+                redirect('walimurid/kontak');
             }
         }
     }
 
     function getSelf() {
-        $this->db->select('nama_pemilik, nomor_wa, id_line, foto');
+        $this->db->select('nama_pemilik, nomor_wa, id_line, foto, nama_anak');
         $this->db->from('tbl_kontak');
         $this->db->where('username', $this->session->userdata('username'));
         $result = $this->db->get()->row_array();
@@ -47,11 +48,21 @@ class Kontak_Model extends CI_Model {
         return $result;
     }
 
+    function getWalas() {
+        $this->db->select('nama_pemilik, nomor_wa, id_line, foto');
+        $this->db->from('tbl_kontak');
+        $this->db->where('status', 'walikelas');
+        $this->db->where('kode_kelas', $this->session->userdata('kode_kelas'));
+        $result = $this->db->get()->row_array();
+        return $result;
+    }
+
     function getAllWalimurid() {
         $this->db->select('*');
         $this->db->from('tbl_kontak');
         $this->db->where('kode_kelas', $this->session->userdata('kode_kelas'));
         $this->db->where('status', 'walimurid');
+        $this->db->where_not_in('username', $this->session->userdata('username'));
         $result = $this->db->get()->result_array();
         return $result;
     }
