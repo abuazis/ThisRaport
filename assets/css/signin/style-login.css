@@ -86,4 +86,32 @@ form {
     width: auto;
     width: 15px;
     height: 15px;
+    float: left;
+}
+@media screen and (max-width: 720px) {
+    .sign-box {
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .sign-box input, select, button {
+        width: 100% !important;
+    }
+    .sign-box form label {
+        margin-left: 3px;
+    }
+}
+@media screen and (max-width: 485px) {
+    .sign-box {
+        height: 625px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .sign-box {
+        width: 100% !important;
+    }
+    .judul {
+        width: 100% !important;
+    }
 }

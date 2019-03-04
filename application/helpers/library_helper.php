@@ -8,6 +8,12 @@ function check_session_akun() {
     }
 }
 
+function check_session_one() {
+    if (!isset($_POST['username'])) {
+        redirect('');
+    }
+}
+
 function check_session_walas() {
     $ci =& get_instance();
     $session = $ci->session->userdata('walas_in');

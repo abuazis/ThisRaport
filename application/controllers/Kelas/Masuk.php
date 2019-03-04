@@ -12,7 +12,7 @@ class Masuk extends CI_Controller {
     public function index() {
         $data['judul'] = 'SIGN IN | SIMANIS';
         $this->load->view('kelas/masuk');
-    }
+    } 
 
     public function validation() {
         $this->form_validation->set_rules('kode', 'Kode Kelas', 'required|trim|exact_length[6]');

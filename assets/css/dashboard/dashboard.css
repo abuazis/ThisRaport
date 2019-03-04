@@ -360,7 +360,22 @@ footer {
         margin-left: 20px;
     }
 }
-
+@media screen and (max-width: 1280px) {
+    .edit {
+        margin-top: 105px !important;
+        position: relative !important;
+        right: 40% !important;
+    }
+    .hapus {
+        position: relative !important;
+        right: 43% !important;
+    }
+}
+@media screen and (max-width: 944px) {
+    .hapus {
+        right: 50% !important;
+    }
+}
 @media screen and (max-width: 800px) {
     .notif h2 {
         font-size: 19pt;
@@ -383,9 +398,9 @@ footer {
     }
 }
 
-@media screen and (max-width: 623px) {
-    .bio h4 {
-        font-size: 12pt;
+@media screen and (max-width: 633px) {
+    .hapus {
+        right: 52% !important;
     }
 }
 
@@ -395,6 +410,12 @@ footer {
         top: 10px;
     }
     
+}
+
+@media screen and (max-width: 568px) {
+    .hapus {
+        right: 55% !important;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -413,6 +434,36 @@ footer {
         color: #0077ff !important;
     }
 }
+@media screen and (max-width: 480px) {
+    .bio {
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .hapus {
+        right: 63% !important;
+    }
+    .photo img {
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 375px) {
+    .navbar-brand {
+        margin-left: 0;
+    }
+    .navbar-brand img {
+        display: none !important;
+    }
+    .bio h4 {
+        font-size: 15pt;
+    }
+    .hapus {
+        right: 75% !important;
+    }
+    .edit {
+        right: 30% !important;
+    }
+}
 @media screen and (max-width: 360px) {
     .navbar-brand {
         position: relative;
@@ -420,5 +471,13 @@ footer {
         margin-left: 0px;
         margin-right: 0px;
         font-size: 15pt;
+    }
+    .bio h4 {
+        font-size: 14pt;
+    }
+}
+@media screen and (max-width: 320px) {
+    .hapus {
+        right: 83% !important;
     }
 }

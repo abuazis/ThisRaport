@@ -34,6 +34,9 @@
                         <input type="text" name="sekolah" id="sekolah" autocomplete="off">
                     <button type="submit" class="w-100 h-btn">BUAT!</button>
                 </form>
+                <div class="punya">
+                    <p>Sudah Punya Kelas?</p><a href="<?= site_url('kelas/masuk'); ?>">MASUK</a>
+                </div>
             </center>
        </div>
     </div>

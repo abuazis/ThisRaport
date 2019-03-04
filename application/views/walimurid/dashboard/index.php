@@ -96,7 +96,7 @@
                 <div class="menu">
                     <div class="raport">
                         <center>
-                        <a href="<?= site_url('walimurid/raport'); ?>"><img src="<?= base_url(); ?>assets/img/buku.png" width="230" class="gbr-buku"></a>
+                        <a href="<?= site_url('walimurid/raport/index/').$walimurid['nis']; ?>"><img src="<?= base_url(); ?>assets/img/buku.png" width="230" class="gbr-buku"></a>
                             <div class="sub-data">
                                 <h2 class="mt-2 weight-menu">Raport Siswa</h2>
                                 <p>Management raport siswa

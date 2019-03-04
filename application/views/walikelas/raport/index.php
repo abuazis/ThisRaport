@@ -53,40 +53,34 @@
     </nav>
 
     <div class="search">
-        <div class="container">
-            <div class="row">
+        <div class="container pb-5 ">
+            <div class="row ml-5">
                 <div class="col-md-12 margen">
                     <center>
-                        <h1>Daftar Raport Siswa</h1>
+                        <h1 class="mb-3 mr-5">Daftar Raport Siswa</h1>
                     </center>
-                    <form action="" method="post" class="form-inline ml-2">
-                        <input type="text" class="form-control form-control-lg lebar-cari mr-3" name="cari" placeholder="Cari...">
-                        <button type="submit" class="btn btn-primary btn-lg float-right">Search <i class="fas fa-search"></i></button>
+                    <form action="" method="post" class="form-inline mr-5">
+                        <input type="text" class="form-control form-control-lg lebar-cari w-100 mr-5" name="cari" placeholder="Cari...">
+                        <button type="submit" class="btn shadow btn-primary btn-lg float-right">Search <i class="fas fa-search"></i></button>
                     </form>
                 </div>
             </div>
-            <div class="pembungkus">
+            <div class="pembungkus ml-4">
                 <?php foreach($siswa as $swa) : ?>
                     <div class="rapots margin-raport">
-                        <a href=""><img src="<?= base_url(); ?>assets/img/buku.png" width="90"></a>
+                        <a href="<?= site_url('walikelas/data/raport/').$swa['nis']; ?>"><img src="<?= base_url(); ?>assets/img/buku.png" width="90"></a>
                         <h3>Raport Penilaian<br>
                         Hasil Belajar</h3>
                         <p><?= $swa['kelas']; ?> <?= $swa['nama_siswa']; ?></p>
                     </div>
                 <?php endforeach; ?>
             </div>
-            <center>
-               <div class="pagination mt-5">
-                    <a href="#">&laquo;</a>
-                    <a href="#">1</a>
-                    <a href="#" class="active">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#">6</a>
-                    <a href="#">&raquo;</a>
-                </div> 
-            </center>
+            <div class="pager">
+                <center>
+                    <?= $pagination ?>
+                </center>
+            </div>
+            
         </div>
     </div>
 

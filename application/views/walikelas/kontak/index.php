@@ -95,29 +95,29 @@
         </div>
     </div>
 
-                    <!-- Modal Edit Kontak -->
-                    <div class="modal fade" id="editKontak" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                            <div class="modal-body">
-                                <h4 class="modal-title h3 text-center font-weight-normal" id="exampleModalLabel">Edit Agenda Pertemuan</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="formGroupExampleInput1 text-left">WhatsApp</label>
-                                        <input type="text" class="form-control" id="formGroupExampleInput">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="formGroupExampleInput2 text-left">LINE</label>
-                                        <input type="teks" class="form-control" id="formGroupExampleInput2">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Batal <i class="fas fa-ban"></i></button>
-                                <button type="button" class="btn btn-primary">Simpan <i class="fas fa-save"></i></button>
-                            </div>
-                            </div>
-                        </div>
+    <!-- Modal Edit Kontak -->
+    <div class="modal fade" id="editKontak" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-body">
+                <h4 class="modal-title h3 text-center font-weight-normal" id="exampleModalLabel">Edit Agenda Pertemuan</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput1 text-left">WhatsApp</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput">
                     </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2 text-left">LINE</label>
+                        <input type="teks" class="form-control" id="formGroupExampleInput2">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Batal <i class="fas fa-ban"></i></button>
+                <button type="button" class="btn btn-primary">Simpan <i class="fas fa-save"></i></button>
+            </div>
+            </div>
+        </div>
+    </div>

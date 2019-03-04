@@ -166,11 +166,16 @@ nav {
         margin-left: 45px;
     }
 }
-@media screen and (max-width: 397px) {
+@media screen and (max-width: 430px) {
     .navbar-brand {
-        margin-left: 5px !important;
+        margin-left: 0px !important;
         margin-right: 0px !important;
     }
+    .face {
+        margin-left: 8.5%;
+    }
+}
+@media screen and (max-width: 410px) {
     .face {
         margin-left: 6%;
     }
@@ -199,13 +204,16 @@ nav {
 @media screen and (max-width: 360px) {
     .navbar-brand {
         position: relative;
-        left: -5px;
+        left: 20px;
         margin-left: 0px;
         margin-right: 0px;
         font-size: 18pt;
     }
+    .navbar-brand img{
+        display: none !important;
+    }
     .face {
-        margin-left: 6.5%;
+        margin-left: 5%;
     }
     .putih{
         margin-left: 5%;
@@ -227,9 +235,6 @@ nav {
     .face .merah {
         margin-right: 0;
         width: 80%;
-    }
-    .navbar-brand img{
-        display: none !important;
     }
     .navbar-brand {
         margin-left: 10% !important;

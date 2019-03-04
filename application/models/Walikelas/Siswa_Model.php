@@ -2,15 +2,7 @@
 
 class Siswa_Model extends CI_Model {
 
-    function getSiswa() {
-        $this->db->select('id, nama_siswa, nis, nama_ortu');
-        $this->db->from('tbl_siswa');
-        $this->db->where('kode_kelas', $this->session->userdata('kode_kelas'));
-        $result = $this->db->get()->result_array();
-        return $result;
-    }
-
-    function getSiswaLimit($limit, $start) {
+    function getSiswa($limit, $start){
         $this->db->select('id, nama_siswa, nis, nama_ortu');
         $this->db->from('tbl_siswa');
         $this->db->where('kode_kelas', $this->session->userdata('kode_kelas'));
