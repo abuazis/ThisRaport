@@ -46,6 +46,14 @@ function check_session_user_walmur() {
     }
 }
 
+function check_walas_walmur() {
+    $ci =& get_instance();
+    $session = $ci->session->userdata('level');
+    if($session != ('walas' || 'walmur')) {
+        redirect('');
+    } 
+}
+
 
 
 ?>

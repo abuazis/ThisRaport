@@ -132,3 +132,4 @@
                 </table>
         </div>
     </div>
+    <a href="<?= site_url('walikelas/data/cetak/').$biodata['raport_id']; ?>" class="btn btn-success btn-lg float-right mt-3 mr-5"><i class="fa fa-download" aria-hidden="true"></i> Unduh Raport</a>

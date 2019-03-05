@@ -132,6 +132,6 @@
                 </table>
         </div>
     </div>
-    <!-- <a href="<?= site_url('walikelas/raport/ubah/').$biodata['raport_id']; ?>" class="btn btn-primary btn-lg float-right mt-3 mr-4"><i class="fa fa-pen-square" aria-hidden="true"></i> Edit Raport</a> -->
+    <a href="<?= site_url('walikelas/raport/ubah/').$biodata['raport_id']; ?>" class="btn btn-primary btn-lg float-right mt-3 mr-4"><i class="fa fa-pen-square" aria-hidden="true"></i> Edit Raport</a>
     <a href="<?= site_url('walikelas/raport/hapus/').$biodata['raport_id']; ?>" class="btn btn-danger btn-lg float-right mt-3 mr-5 tombol-hapus"><i class="fa fa-trash" aria-hidden="true"></i> Hapus Raport</a>
     <a href="<?= site_url('walikelas/data/cetak/').$biodata['raport_id']; ?>" class="btn btn-success btn-lg float-right mt-3 mr-5"><i class="fa fa-download" aria-hidden="true"></i> Unduh Raport</a>

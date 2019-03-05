@@ -91,6 +91,6 @@
                 </center>
             </div>
         </div>
-        <a href="<?= site_url('walikelas/siswa/tambah'); ?>"><button class="btn btn-success btn-lg float-right margen mr-5 w-25" data-toggle="modal" data-target="#modalTambah">Tambah Siswa <i class="fas fa-plus"></i></button></a>
+        <a href="<?= site_url('walikelas/siswa/tambah'); ?>"><button class="btn btn-success btn-lg float-right margen mr-5 w-25 tambah">Tambah Siswa <i class="fas fa-plus"></i></button></a>
         <div class="flash-data" data-flashdata="<?= $this->session->flashdata('siswa_berhasil'); ?>"></div>
         </div>

@@ -1,5 +1,6 @@
 body {
-    background-color: #e8e8e8;
+	background-color: #e8e8e8;
+	overflow-x: hidden;
 }
 .ini {
     z-index: 9;
@@ -192,6 +193,17 @@ footer {
 	margin: 0;
 }
 
+@media screen and (max-width: 1242px) {
+	.lebar-cari {
+		width: 96% !important;
+	}
+	.cari {
+		width: 96% !important;
+		margin-top: 15px !important;
+		margin-left: 10px !important;
+	}
+}
+
 @media screen and (max-width: 1024px) {
 	input[type="text"] {
 		width: 96%;
@@ -225,6 +237,27 @@ footer {
     }
 }
 
+@media screen and (max-width: 615px) {
+	.kertas {
+		height: auto !important;
+	}
+	.tambah {
+		margin-top: 40px !important;
+		float: right !important;
+		font-size: 3vw;
+		padding-left: 1px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.navbar-brand {
+        margin-left: 0;
+    }
+    .navbar-brand img {
+        display: none !important;
+    }
+}
+
 @media screen and (max-width: 360px) {
     .navbar-brand {
         position: relative;
@@ -238,6 +271,13 @@ footer {
 	}
 	.kertas h3 {
 		font-size: 16pt;
+	}
+	.lebar-cari {
+		width: 91% !important;
+	}
+	.cari {
+		width: 91% !important;
+		margin-top: 15px !important;
 	}
 }
 

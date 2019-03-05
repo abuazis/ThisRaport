@@ -107,6 +107,7 @@
             </center>
         </div>
     </div>
+    <div class="flash-data" data-flashdata="<?= $this->session->flashdata('aksi_berhasil'); ?>"></div>
 
                     <!-- Modal Edit Kontak -->
                     <div class="modal fade" id="editKontak" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

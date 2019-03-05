@@ -18,7 +18,7 @@ class Siswa extends CI_Controller {
         }
         $config['base_url'] = site_url('walikelas/siswa/index'); 
         $config['total_rows'] = $this->db->count_all('tbl_siswa'); 
-        $config['per_page'] = 1; 
+        $config['per_page'] = 9; 
         $config["uri_segment"] = 4; 
         $choice = $config["total_rows"] / $config["per_page"];
         $config["num_links"] = floor($choice);

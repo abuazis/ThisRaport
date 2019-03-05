@@ -43,6 +43,7 @@ class Raport extends CI_Controller {
 
         $data['pagination'] = $this->pagination->create_links();
         $this->load->view('walikelas/raport/index', $data);
+        $this->load->view('templates/footer');
     }
 
     public function buat() {
@@ -50,7 +51,7 @@ class Raport extends CI_Controller {
 
         if(isset($_POST['submit'])) {
             $this->Raport_Model->buatRaport();
-            $this->session->userdata('berhasil_raport', 'Raport Berhasil Dibuat');
+            $this->session->set_flashdata('berhasil_raport', 'Raport Berhasil Dibuat');
             redirect('walikelas/raport');
         } else {
             $this->load->view('walikelas/raport/buat', $data);

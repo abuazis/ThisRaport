@@ -13,10 +13,10 @@ class Data extends CI_Controller {
         $this->load->library('pagination');
         $this->load->model('Walikelas/Data_Model');
         $this->load->model('Walikelas/Raport_Model');
-        check_session_user_walas();
     }
 
     public function raport($nis) {
+        check_session_user_walas();
         $data = [
             'judul' => 'Raport | SIMANIS',
             'siswa' => $this->Data_Model->getSiswa($nis),
@@ -27,6 +27,7 @@ class Data extends CI_Controller {
     }
 
     public function hasil($id) {
+        check_session_user_walas();
         $data = [
             'judul' => 'Raport | SIMANIS',
             'biodata' => $this->Data_Model->getBiodata($id),
@@ -39,6 +40,7 @@ class Data extends CI_Controller {
     }
 
     public function cetak($id) {
+        check_walas_walmur();
         $this->load->library('pdf');
         $data = [
             'judul' => 'Raport | SIMANIS',

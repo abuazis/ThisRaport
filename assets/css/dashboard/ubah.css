@@ -24,3 +24,12 @@ label {
 .weight-field {
     font-weight: 600 !important;
 }
+
+@media screen and (max-width: 375px) {
+    .navbar-brand {
+        margin-left: 0;
+    }
+    .navbar-brand img {
+        display: none !important;
+    }
+}

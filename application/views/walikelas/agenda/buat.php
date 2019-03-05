@@ -99,9 +99,9 @@
                             <input type="time" name="selesai" class="form-control" id="selesai">
                         </div>
                         <div class="form-group">
-                            <label for="selesai" class="float-left weight-field">Lokasi Pertemuan</label>&nbsp;&nbsp;&nbsp;
+                            <label for="lokasi" class="float-left weight-field">Lokasi Pertemuan</label>&nbsp;&nbsp;&nbsp;
                             <small class="form-text text-danger ml-3 float-left"><?= form_error('lokasi'); ?></small>
-                            <input type="text" name="selesai" class="form-control" id="selesai">
+                            <input type="text" name="lokasi" class="form-control" id="lokasi">
                         </div>
                         <div class="modal-body">
                             <button type="submit" class="btn btn-primary btn-lg btn-block w-150 mb-5">BUAT <i class="fas fa-calendar-plus"></i></button>
