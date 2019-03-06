@@ -235,20 +235,10 @@ footer {
 	margin: 0;
 }
 
-@media screen and (max-width: 992px) {
-    .putih {
-        background-color: white !important;
-        border-radius: 10px !important;
-    } 
-    ul {
+@media screen and (max-width: 1368px) {
+    .bungkus .profile {
         width: 100% !important;
-        padding-left: 5% !important;
-    }
-    .nav-item a {
-        text-align: center !important;
-        margin-top: 15px;
-        margin-bottom: 30px;
-        color: #0077ff !important;
+        margin-bottom: 20px;
     }
 }
 
@@ -262,6 +252,32 @@ footer {
         left: 90px;
         height: 40px !important;
     }
+    .nama {
+        font-size: 20pt !important;
+    }
+}
+
+@media screen and (max-width: 1258px) {
+    .lebar-cari {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+    .tombol {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 1193px) {
+    .nomor-pemilik {
+        font-size: 2.8vw !important;
+    }
+}
+
+@media screen and (max-width: 1083px) {
+    .hilang {
+        display: none;
+    } 
 }
 
 @media screen and (max-width: 1024px) {
@@ -280,11 +296,40 @@ footer {
     .jarak {
         left: 70px;
     }
+    .nomor-pemilik {
+        font-size: 19pt !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .putih {
+        background-color: white !important;
+        border-radius: 10px !important;
+    } 
+    ul {
+        width: 100% !important;
+        padding-left: 5% !important;
+    }
+    .nav-item a {
+        text-align: center !important;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        color: #0077ff !important;
+    }
 }
 
 @media screen and (max-width: 960px) {
     .jarak {
         left: 55px;
+    }
+}
+
+@media screen and (max-width: 894px) {
+    .nomor-pemilik {
+        font-size: 20pt !important;
+    }
+    .lebarop {
+        height: auto;
     }
 }
 
@@ -308,6 +353,12 @@ footer {
     }
 }
 
+@media screen and (max-width: 690px) {
+    .profile {
+        height: auto;
+    }
+}
+
 @media screen and (max-width: 640px) {
     .photo {
         width: auto;
@@ -327,14 +378,37 @@ footer {
     }
 }
 
-@media screen and (max-width: 480px) {
-    .profile {
-        height: 450px;
+@media screen and (max-width: 496px) {
+    .nomor-pemilik {
+        font-size: 15pt !important;
     }
+    .profile {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
     .jarak {
         left: 0px;
         width: 100%;
         top: -70px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .nomor a span {
+        font-size: 15pt;
+    }
+    .nomor span {
+        margin-left: 10% !important;
+    }
+}
+@media screen and (max-width: 375px) {
+	.navbar-brand {
+        margin-left: 0;
+    }
+    .navbar-brand img {
+        display: none !important;
     }
 }
 

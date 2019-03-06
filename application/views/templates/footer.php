@@ -42,15 +42,16 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" ></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" ></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/aos.js"></script>
+    <script src="<?= base_url(); ?>assets/js/react.development.js" crossorigin></script>
+    <script src="<?= base_url(); ?>assets/js/react-dom.development.js" crossorigin></script>
+    <script src="<?= base_url(); ?>assets/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/popper.min.js" ></script>
+    <script src="<?= base_url(); ?>assets/js/bootstrap.min.js" ></script>
     <script src="<?= base_url(); ?>assets/js/alert/sweetalert2.all.min.js"></script>
     <script src="<?= base_url(); ?>assets/js/alert/script.js"></script>
     <script>
+        AOS.init();
         $(window).scroll(function () {
             if ($(window).scrollTop() >= 60) {
                 $('.navku').css('background','#0077ff');

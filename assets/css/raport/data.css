@@ -204,6 +204,12 @@ footer {
 	}
 }
 
+@media screen and (max-width: 677px) {
+	.margen {
+		margin-right: 4% !important;
+	}
+}
+
 @media screen and (max-width: 640px) {
 	.margen {
 		margin-top: 120px;
@@ -211,9 +217,6 @@ footer {
 	footer {
 		margin-top: 200px !important;
 	}
-}
-
-@media screen and (max-width: 600px) {
 	.kertas {
 		height: 3600px;
 	}
@@ -229,8 +232,25 @@ footer {
 	.margen {
 		margin-top: 143px;
 	}
+	.tombol-hapus, .unduh {
+		position: relative !important;
+		top: 125px !important;
+		width: 100% !important;
+		margin-right: 0px !important;
+	}
+	footer {
+		position: relative;
+		top: 70px;
+	}
 }
-
+@media screen and (max-width: 375px) {
+	.navbar-brand {
+        margin-left: 0;
+    }
+    .navbar-brand img {
+        display: none !important;
+    }
+}
 @media screen and (max-width: 360px) {
     .navbar-brand {
         position: relative;

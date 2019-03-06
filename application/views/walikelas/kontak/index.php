@@ -59,7 +59,7 @@
                     <div class="col-md-3 pt-4 pl-5">
                         <img class="mt-1" src="<?= base_url().$self['foto']; ?>" width="200">
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 hilang">
                         <h2 class="nama"><?= $self['nama_pemilik']; ?></h2>
                         <h5>Walikelas <?= $kelas['nama_kelas']; ?></h5>
                     </div>

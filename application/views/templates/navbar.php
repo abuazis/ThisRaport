@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap/bootstrap.css">
+    <link href="<?= base_url(); ?>assets/css/aos.css" rel="stylesheet">
     
     <!-- Native CSS -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/dashboard/dashboard.css">

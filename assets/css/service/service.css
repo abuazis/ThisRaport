@@ -155,3 +155,16 @@ small {
 small p {
     margin: 0px !important;
 }
+
+@media screen and (max-width: 480px) {
+    .login-box {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .login-box input, select, button {
+        width: 100% !important;
+    }
+    .login-box form label {
+        margin-left: 3px;
+    }
+}

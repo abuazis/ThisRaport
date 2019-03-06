@@ -1,10 +1,10 @@
-        <div class="face">
-            <h2>DIGITAL RAPORT</h2><br>
-            <p>Aplikasi yang mempermudah Orang Tua dan Guru dalam
+        <div class="face" data-av-animation="slideInRight">
+            <h2 data-aos="fade-right" data-aos-duration="1500">DIGITAL RAPORT</h2><br>
+            <p data-aos="fade-left" data-aos-duration="1500" data-aos-delay="200">Aplikasi yang mempermudah Orang Tua dan Guru dalam
             pembagian hasil evaluasi belajar siswa dan berkonsultasi
             secara online/digital</p>
-            <button class="hijau" data-toggle="modal" data-target="#ModalWalikelas">WALI KELAS</button>
-            <button class="merah" data-toggle="modal" data-target="#ModalWalimurid">WALI MURID</button>
+            <button data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400" class="hijau" data-toggle="modal" data-target="#ModalWalikelas">WALI KELAS</button>
+            <button data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400" class="merah" data-toggle="modal" data-target="#ModalWalimurid">WALI MURID</button>
         </div>
         <!-- Modal Walimurid -->
         <div class="modal fade" id="ModalWalikelas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -57,7 +57,7 @@
             <h2>Our Features</h2>
         </div>
         <div class="container-features">
-            <div class="fitur">
+            <div class="fitur" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="200">
                 <center>
                     <img src="assets/img/buku.png" width="180">
                     <h2>Raport Digital</h2>
@@ -65,7 +65,7 @@
                     dalam pembagian raport siswa</p>
                 </center>
             </div>
-            <div class="fitur">
+            <div class="fitur" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="400">
                 <center>
                     <img src="assets/img/kalendar.png" width="180">
                     <h2>Agenda Pertemuan</h2>
@@ -73,7 +73,7 @@
                     untuk menjadwalkan pertemuan </p>
                 </center>
             </div>
-            <div class="fitur">
+            <div class="fitur" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600">
                 <center>
                     <img src="assets/img/cetak.png" width="180">
                     <h2>Cetak Raport</h2>
@@ -81,7 +81,7 @@
                     dijadikan bukti yang formal</p>
                 </center>
             </div>
-            <div class="fitur">
+            <div class="fitur" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="800">
                 <center>
                     <img src="assets/img/chat.png" width="180">
                     <h2>Contact Person</h2>
@@ -100,7 +100,7 @@
         </div>        
         <div class="container-testimonial">
             <?php foreach($testimonial as $testi) : ?>
-                <div class="testi">
+                <div class="testi" data-aos="fade-in" data-aos-duration="2000" data-aos-delay="200">
                     <p><b>"</b><?= $testi['isi_pesan']; ?><b>" <?= $testi['nama_pengirim']; ?></b></p>
                 </div>
             <?php endforeach; ?>
@@ -113,19 +113,19 @@
             <h2>How To Join</h2>
         </div>
         <div class="container-join">
-            <div class="step">
+            <div class="step" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="400">
                 <center>
                     <img src="assets/img/step1.png">
                     <h3>1. Pilih Status Anda</h3>
                 </center>
             </div>
-            <div class="step">
+            <div class="step" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
                 <center>
                     <img src="assets/img/step2.png">
                     <h3>2. Pilih Sign In/Sign Up</h3>
                 </center>
             </div>
-            <div class="step">
+            <div class="step" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="600">
                 <center>
                     <img src="assets/img/step3.png">
                     <h3>3. Silahkan Lakukan Registrasi</h3>

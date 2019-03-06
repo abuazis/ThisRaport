@@ -42,7 +42,7 @@ body {
     width: 300px;
     height: 100px;
     background-color: white;
-    margin: 20px 10px;
+    margin: 20px 0px 20px 0px;;
     border-radius: 5px;
     box-shadow: 5px 12px 20px rgba(36,37,38,0.13);
     padding-top: 5px;
@@ -219,37 +219,35 @@ footer {
 	margin: 0;
 }
 
-@media screen and (max-width: 1006px) {
+@media screen and (max-width: 1022px) {
     input[type="text"] {
-        width: 100%;
+        width: 100% !important;
+        margin-right: 20px !important;
     }
     .btn {
         margin-top: 10px;
         display: block;
         width: 100%;
+        margin-right: 20px !important;
     }
-}
-@media screen and (max-width: 1006px) {
     .rapots {
-        width: 100%;
+        width: 86% !important;
+    }
+    .pembungkus {
+        justify-content: center;
     }
 }
-@media screen and (max-width: 555px) {
-    .rapots p {
-        left: -155px;
-        top: 30px;
+@media screen and (max-width: 783px) {
+    .rapots {
+        width: 100% !important;
+        margin-right: 0px !important;
+        margin-left: 0px !important;
     }
-}
-@media screen and (max-width: 421px) {
-    .rapots p {
-        left: 150px;
-        top: -30px;
+    .pembungkus {
+        margin: 0px !important;
     }
-}
-@media screen and (max-width: 324px) {
     .rapots p {
-        left: 120px;
-        top: -30px;
+        left: 10% !important;
     }
 }
 @media screen and (max-width: 992px) {
@@ -266,6 +264,33 @@ footer {
         margin-top: 15px;
         margin-bottom: 30px;
         color: #0077ff !important;
+    }
+}
+@media screen and (max-width: 532px) {
+    h1 {
+        font-size: 27pt;
+    }
+    .rapots p {
+        left: 4vw !important;
+    }
+}
+@media screen and (max-width: 504px) {
+    .rapots h3 {
+        display: none;
+    }
+}
+@media screen and (max-width: 375px) {
+	.navbar-brand {
+        margin-left: 0;
+    }
+    .navbar-brand img {
+        display: none !important;
+    }
+    h1 {
+        font-size: 15pt !important;
+    }
+    form {
+        margin-right: 0px !important;
     }
 }
 @media screen and (max-width: 360px) {
@@ -291,6 +316,9 @@ footer {
 @media screen and (max-width: 320px) {
     .pagination a {
         padding: 10px 12px;
+    }
+    .rapots p {
+        left: 0.1vw !important;
     }
 }
 

@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/home/testimonial.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/home/join.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/home/footer.css">
+    <link href="<?= base_url(); ?>assets/css/aos.css" rel="stylesheet">
 
     <!-- Icon -->
     <link rel="shortcut icon" href="<?= base_url(); ?>assets/img/logo.jpg" type="image/x-icon">

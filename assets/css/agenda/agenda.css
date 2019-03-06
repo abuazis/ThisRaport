@@ -209,26 +209,19 @@ footer {
 	font-weight: 300;
 	margin: 0;
 }
-@media screen and (max-width: 1312px) {
+@media screen and (max-width: 1328px) {
     .jadwal {
-        width: 750px; 
-    }
-}
-@media screen and (max-width: 1280px) {
-    .jarak {
-        position: relative;
-        top: -35px;
-    }
-    .edit {
-        margin-left: 10px;
+        width: 100%; 
     }
     .marge {
-        left: 40%;
+        position: relative;
+        width: 100% !important;
+        top: 140%;
+        left: 0;
     }
-}
-@media screen and (max-width: 1211px) {
-    .jadwal {
-        width: 680px; 
+    .notif {
+        margin-top: 15px;
+        width: 100% !important;
     }
 }
 @media screen and (max-width: 1142px) {
@@ -238,18 +231,6 @@ footer {
     .notif {
         margin-top: 40px;
         width: 100%;
-    }
-}
-@media screen and (max-width: 1024px) {
-    .jarak {
-        position: relative;
-        top: 0px;
-    }
-    .marge {
-        left: 20%;
-    }
-    .agenda {
-        padding: 0px 10px;
     }
 }
 @media screen and (max-width: 992px) {
@@ -268,18 +249,28 @@ footer {
         color: #0077ff !important;
     }
 }
-@media screen and (max-width: 960px) {
-    .marge {
-        left: 21%;
-    }
-}
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 954px) {
     .edit {
         position: relative;
-        top: -38px;
+        top: -160px;
     }
-    .marge {
-        left: 37%;
+}
+@media screen and (max-width: 889px) {
+    .edit {
+        top: -40px;
+        right: 10px;
+    }
+    .hapus {
+        position: relative;
+        top: -40px !important;
+    }
+}
+@media screen and (max-width: 812px) {
+    .edit {
+        top: -35px;
+    }
+    .hapus {
+        top: -5px !important;
     }
 }
 @media screen and (max-width: 796px) {
@@ -294,18 +285,25 @@ footer {
         width: 150px;
     }
 }
-@media screen and (max-width: 720px) {
-    .hapus {
-        position: relative;       
-        top: -38px;
+@media screen and (max-width: 773px) {
+    .edit {
+        top: -20px;
     }
-    .marge {
-        left: 42%;
+    .hapus {
+        top: -5px !important;
     }
 }
-@media screen and (max-width: 640px) {
-    .marge {
-        left: 63%;
+@media screen and (max-width: 765px) {
+    .edit {
+        top: -35px;
+    }
+}
+@media screen and (max-width: 757px) {
+    .edit {
+        top: -40px;
+    }
+    .hapus {
+        top: -40px !important;
     }
 }
 @media screen and (max-width: 600px) {
@@ -314,9 +312,9 @@ footer {
         left: 0%;
     }
 }
-@media screen and (max-width: 593px) {
-    .marge {
-        margin-top: 350px;
+@media screen and (max-width: 579px) {
+    .jadwal {
+        height: auto;
     }
 }
 @media screen and (max-width: 579px) {
@@ -334,18 +332,20 @@ footer {
     }
 }
 @media screen and (max-width: 480px) {
+    .jadwal {
+        justify-content: center !important;
+    }
     .agenda {
         padding: 8px 8px;
     }
     .edit {
-        display: block !important;
         width: 100%;
-        top: 1%;
+        right: 0 !important;
+        margin-top: 10px;
     }
     .hapus {
-        display: block !important;
+        margin-top: 50px;
         width: 100%;
-        top: 0.5%;
     }
     .jdwl {
         height: 390px;;
@@ -355,6 +355,24 @@ footer {
         top: 30px;
     }
 }
+@media screen and (max-width: 448px) {
+    .jdwl {
+        height: 420px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+	.navbar-brand {
+        margin-left: 0 !important;
+    }
+    .navbar-brand img {
+        display: none !important;
+    }
+    h1 {
+        font-size: 24pt !important;
+    }
+}
+
 @media screen and (max-width: 360px) {
     .jdwl {
         height: 400px;
