@@ -77,7 +77,9 @@
             </div>
             <div class="pager">
                 <center>
-                    <?= $pagination ?>
+                    <?php if(!isset($_POST['cari'])) : ?>
+                        <?= $pagination ?>
+                    <?php endif; ?>
                 </center>
             </div>
         </div>

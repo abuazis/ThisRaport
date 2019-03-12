@@ -303,7 +303,7 @@ footer {
         font-size: 20pt;
     }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 424px) {
 	.navbar-brand {
         margin-left: 0;
     }

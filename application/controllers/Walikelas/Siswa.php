@@ -15,41 +15,44 @@ class Siswa extends CI_Controller {
         $data['judul'] = 'Siswa | SIMANIS';
         if($this->input->post('cari')) {
             $data['siswa'] = $this->Siswa_Model->cariSiswa();
+            $this->load->view('walikelas/siswa/index',$data);
+            $this->load->view('templates/footer');
+        } else {
+            $config['base_url'] = site_url('walikelas/siswa/index'); 
+            $config['total_rows'] = $this->db->count_all('tbl_siswa'); 
+            $config['per_page'] = 2; 
+            $config["uri_segment"] = 4; 
+            $choice = $config["total_rows"] / $config["per_page"];
+            $config["num_links"] = floor($choice);
+            $config['first_link']       = 'First';
+            $config['last_link']        = 'Last';
+            $config['next_link']        = '&raquo;';
+            $config['prev_link']        = '&laquo';
+            $config['full_tag_open']    = '<div class="pagination">';
+            $config['full_tag_close']   = '</div>';
+            $config['num_tag_open']     = '<a>';
+            $config['num_tag_close']    = '</a>';
+            $config['cur_tag_open']     = '<a class="active">';
+            $config['cur_tag_close']    = '</a>';
+            $config['next_tag_open']    = '<a>';
+            $config['next_tag_close']  = '</a>';
+            $config['prev_tag_open']    = '<a>';
+            $config['prev_tag_close']  = '</a>';
+            $config['first_tag_open']   = '<a>';
+            $config['first_tag_close'] = '</a>';
+            $config['last_tag_open']    = '<a>';
+            $config['last_tag_close']  = '</a>';
+
+            $this->pagination->initialize($config);
+            $data['page'] = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
+
+            $data['siswa'] = $this->Siswa_Model->getSiswa($config["per_page"], $data['page']);           
+
+            $data['pagination'] = $this->pagination->create_links();
+
+            $this->load->view('walikelas/siswa/index',$data);
+            $this->load->view('templates/footer');
         }
-        $config['base_url'] = site_url('walikelas/siswa/index'); 
-        $config['total_rows'] = $this->db->count_all('tbl_siswa'); 
-        $config['per_page'] = 9; 
-        $config["uri_segment"] = 4; 
-        $choice = $config["total_rows"] / $config["per_page"];
-        $config["num_links"] = floor($choice);
-        $config['first_link']       = 'First';
-        $config['last_link']        = 'Last';
-        $config['next_link']        = '&raquo;';
-        $config['prev_link']        = '&laquo';
-        $config['full_tag_open']    = '<div class="pagination">';
-        $config['full_tag_close']   = '</div>';
-        $config['num_tag_open']     = '<a>';
-        $config['num_tag_close']    = '</a>';
-        $config['cur_tag_open']     = '<a class="active">';
-        $config['cur_tag_close']    = '</a>';
-        $config['next_tag_open']    = '<a>';
-        $config['next_tag_close']  = '</a>';
-        $config['prev_tag_open']    = '<a>';
-        $config['prev_tag_close']  = '</a>';
-        $config['first_tag_open']   = '<a>';
-        $config['first_tag_close'] = '</a>';
-        $config['last_tag_open']    = '<a>';
-        $config['last_tag_close']  = '</a>';
-
-        $this->pagination->initialize($config);
-        $data['page'] = ($this->uri->segment(4)) ? $this->uri->segment(4) : 0;
-
-        $data['siswa'] = $this->Siswa_Model->getSiswa($config["per_page"], $data['page']);           
-
-        $data['pagination'] = $this->pagination->create_links();
-
-        $this->load->view('walikelas/siswa/index',$data);
-        $this->load->view('templates/footer');
     }
 
     public function detail($id) {

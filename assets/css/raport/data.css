@@ -210,15 +210,18 @@ footer {
 	}
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 656px) {
 	.margen {
-		margin-top: 120px;
+		margin-top: 120px !important;
 	}
+}
+
+@media screen and (max-width: 640px) {
 	footer {
 		margin-top: 200px !important;
 	}
 	.kertas {
-		height: 3600px;
+		height: auto;
 	}
 }
 
@@ -243,7 +246,7 @@ footer {
 		top: 70px;
 	}
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 424px) {
 	.navbar-brand {
         margin-left: 0;
     }

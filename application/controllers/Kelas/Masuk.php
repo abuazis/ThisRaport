@@ -28,6 +28,7 @@ class Masuk extends CI_Controller {
                     $this->session->set_flashdata('login_walas', 'Anda Telah Berhasil Login Ke Dashboard');
                     redirect('walikelas/dashboard');
                 } else {
+                    $this->session->set_flashdata('login_walmur', 'Anda Telah Berhasil Login Ke Dashboard');
                     redirect('walimurid/dashboard');
                 }
             } else {

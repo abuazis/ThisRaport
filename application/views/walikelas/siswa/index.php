@@ -87,7 +87,9 @@
                 </tbody>
                 </table>
                 <center>
-                    <?php echo $pagination; ?>
+                    <?php if(!isset($_POST['cari'])) : ?>
+                        <?php echo $pagination; ?>
+                    <?php endif; ?>
                 </center>
             </div>
         </div>
