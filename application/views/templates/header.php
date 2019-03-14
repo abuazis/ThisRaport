@@ -26,7 +26,7 @@
     
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top navku">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="<?= site_url(''); ?>">
                 <img src="assets/img/logo.jpg" width="50" class="d-inline-block" alt="">
                 DIGITAL RAPORT
             </a>
@@ -37,22 +37,22 @@
             <div class="collapse navbar-collapse putih" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto topnav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Absensi</a>
+                        <a class="nav-link active" href="#">Raport</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Ekskul</a>
+                        <a class="nav-link active" href="#">Siswa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Komunitas</a>
+                        <a class="nav-link active" href="#">Agenda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Raport <span class="sr-only">(current)</span></a>
+                        <a class="nav-link active" href="#">Kontak</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Hubin</a>
+                        <a class="nav-link active" href="#">Service</a>
                     </li>
                 </ul>
             </div>

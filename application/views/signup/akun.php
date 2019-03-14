@@ -20,7 +20,7 @@
                     <label for="username">Username</label>
                         <small><?= form_error('username'); ?></small>
                         <input type="text" name="username" id="username" autocomplete="off">
-                    <label for="level">Level</label>
+                    <label for="level">Status</label>
                         <small><?= form_error('level'); ?></small>
                         <select name="level" id="level">
                             <option></option>

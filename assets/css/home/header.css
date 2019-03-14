@@ -104,10 +104,10 @@ nav {
     color: white;
     box-shadow: 0px 0px 7px #535353;
 }
-.face .hijau {
+.face .hijau, .hijau {
     background-color: #24D11B;
 }
-.face .merah {
+.face .merah, .merah {
     background-color: #F24349;
 }
 .tombol {

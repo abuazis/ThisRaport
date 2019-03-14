@@ -75,7 +75,7 @@
             </div>
             <div class="fitur" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="600">
                 <center>
-                    <img src="assets/img/cetak.png" width="180">
+                    <img src="assets/img/cetak.png" width="180" class="mb-2">
                     <h2>Cetak Raport</h2>
                     <p>Cetak raport anak anda untuk<br>
                     dijadikan bukti yang formal</p>
