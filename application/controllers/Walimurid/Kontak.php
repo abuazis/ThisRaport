@@ -1,8 +1,10 @@
 <?php
 
-class Kontak extends CI_Controller {
+class Kontak extends CI_Controller
+{
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         $this->load->helper('cookie');
         $this->load->library('form_validation');
@@ -11,7 +13,8 @@ class Kontak extends CI_Controller {
         check_session_user_walmur();
     }
 
-    public function index() {
+    public function index()
+    {
         $data = [
             'judul' => 'Kontak | SIMANIS',
             'self' => $this->Kontak_Model->getSelf(),
@@ -19,31 +22,48 @@ class Kontak extends CI_Controller {
             'walas' => $this->Kontak_Model->getWalas(),
             'walimurid' => $this->Kontak_Model->getAllWalimurid()
         ];
-        if($this->input->post('cari')) {
+        if ($this->input->post('cari')) {
             $data['walimurid'] = $this->Kontak_Model->cariKontak();
         }
         $this->load->view('walimurid/kontak/index', $data);
         $this->load->view('templates/footer');
     }
 
-    public function aksi() {
+    public function buat()
+    {
         $data['judul'] = 'Aksi | SIMANIS';
-        $this->load->view('walikelas/kontak/aksi', $data);
-        $this->load->view('templates/footer');  
+        $this->load->view('walimurid/kontak/buat', $data);
+        $this->load->view('templates/footer');
 
         $this->form_validation->set_rules('nama', 'Nama Pemilik', 'required|min_length[4]|max_length[50]');
         $this->form_validation->set_rules('wa', 'Nomor Whatsapp', 'required|min_length[11]|max_length[13]|numeric');
         $this->form_validation->set_rules('line', 'ID Line', 'required|min_length[3]');
         $this->form_validation->set_rules('anak', 'Nama Anak', 'required|min_length[4]|max_length[50]');
 
-        if ($this->form_validation->run() == TRUE) {
-            $this->Kontak_Model->aksiKontak();
+        if ($this->form_validation->run() == true) {
+            $this->Kontak_Model->buatKontak();
             $this->session->set_flashdata('aksi_berhasil', 'Anda Telah Memperbaharui Kontak Anda');
-            redirect('walikelas/kontak');
+            redirect('walimurid/kontak');
         }
-
     }
 
-}
+    public function ubah($id) 
+    {
+        $data['judul'] = 'Ubah | SIMANIS';
+        $data['bio'] = $this->Kontak_Model->getSelfById($id);
+        $this->load->view('walimurid/kontak/ubah', $data);
+        $this->load->view('templates/footer');
 
-?>
+        $this->form_validation->set_rules('nama', 'Nama Pemilik', 'required|min_length[4]|max_length[50]');
+        $this->form_validation->set_rules('wa', 'Nomor Whatsapp', 'required|min_length[11]|max_length[13]|numeric');
+        $this->form_validation->set_rules('line', 'ID Line', 'required|min_length[3]');
+        $this->form_validation->set_rules('anak', 'Nama Anak', 'required|min_length[4]|max_length[50]');
+
+        if ($this->form_validation->run() == true) {
+            $this->Kontak_Model->ubahKontak();
+            $this->session->set_flashdata('aksi_berhasil', 'Anda Telah Memperbaharui Kontak Anda');
+            redirect('walimurid/kontak');
+        }
+    }
+}
+ 

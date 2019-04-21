@@ -19,31 +19,31 @@
                 <form action="<?= site_url('signup/walikelas/validation'); ?>" method="post" enctype="multipart/form-data">
                     <div class="upload-btn-wrapper">
                         <button class="btn">Add Photo <b>+</b></button>
-                        <input type="file" name="foto" id="foto">
+                        <input type="file" name="foto" id="foto" value="<?= set_value('foto') ?>">
                     </div>
                     <br>
                     <label for="nama">Nama Lengkap</label>
                         <small><?= form_error('nama'); ?></small>
-                        <input type="text" name="nama" id="nama" autocomplete="off">
+                        <input type="text" name="nama" id="nama" autocomplete="off" value="<?= set_value('nama') ?>">
                     <label for="nip">NIP</label>
                         <small><?= form_error('nip'); ?></small>
-                        <input type="text" name="nip" id="nip" autocomplete="off">
+                        <input type="text" name="nip" id="nip" autocomplete="off" value="<?= set_value('nip') ?>">
                     <label for="mapel">Mata Pelajaran</label>
                         <small><?= form_error('mapel'); ?></small>
-                        <input type="text" name="mapel" id="mapel" autocomplete="off">
+                        <input type="text" name="mapel" id="mapel" autocomplete="off" value="<?= set_value('mapel') ?>">
                     <label for="status">Status Guru</label>
                         <small><?= form_error('status'); ?></small>
                         <select name="status" id="status">
                             <option></option>
-                            <option value="honorer">Honorer</option>
-                            <option value="pns">PNS</option>
+                            <option value="honorer" <?= set_select('status', 'honorer') ?>>Honorer</option>
+                            <option value="pns" <?= set_select('status', 'pns') ?>>PNS</option>
                         </select>
                     <label for="kelas">Kelas</label>
                         <small><?= form_error('kelas'); ?></small>
-                        <input type="text" name="kelas" id="kelas" autocomplete="off">
+                        <input type="text" name="kelas" id="kelas" autocomplete="off" value="<?= set_value('kelas') ?>">
                     <label for="sekolah">Sekolah</label>
                         <small><?= form_error('sekolah'); ?></small>
-                        <input type="text" name="sekolah" id="sekolah" autocomplete="off">
+                        <input type="text" name="sekolah" id="sekolah" autocomplete="off" value="<?= set_value('sekolah') ?>">
                     <button class="hijau" type="submit">SIGN UP!</button>
                 </form> 
                 <div class="punya">

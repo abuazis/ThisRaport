@@ -28,7 +28,7 @@ body {
 .judul {
     width: 320px;
     height: 50px;
-    background: rgb(255, 199, 17);;
+    background: #43D10F;
     position: relative;
     border-radius: 5px;
     top: 8px;
@@ -93,7 +93,7 @@ body {
 .buat button {
     width: 100px;
     height: 30px;
-    background-color: #F5C023;
+    background-color: #43D10F;
     border: none;
     color: white;
     border-radius: 5px;
@@ -125,7 +125,7 @@ body {
 	color: #fff;
     font-size: 22px;
     font-weight: 600px;
-	background: #24D11B;
+	background: #43D10F;
 	cursor: pointer;
     border-radius: 5px;
     box-shadow: 0px 0px 16px rgb(59, 59, 59);

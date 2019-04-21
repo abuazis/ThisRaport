@@ -55,4 +55,3 @@ $route['translate_uri_dashes'] = FALSE;
 
 /* Router For Signup, Signin, Kelas */
 $route['signup'] = 'Signup/Akun';
-$route['walikelas/xirpl'] = 'walikelas/raport';

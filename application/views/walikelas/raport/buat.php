@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap/bootstrap.css">
-    
+
     <!-- Native CSS -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/raport/buat.css">
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/raport/table.css">
@@ -18,10 +19,14 @@
 
     <title>Simanis | Raport Digital</title>
 </head>
+
 <body>
     <!-- Ini Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark biru fixed-top ini">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand ml-4" href="javascript:window.history.go(-1);">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <a class="navbar-brand ml-0" href="<?= site_url(''); ?>">
             <img src="<?= base_url(); ?>assets/img/logo.jpg" width="50" class="d-inline-block" alt="">
             DIGITAL RAPORT
         </a>
@@ -32,22 +37,22 @@
         <div class="collapse navbar-collapse putih" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto topnav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/dashboard') ?>">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Absensi</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/raport') ?>">Raport</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Ekskul</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/siswa') ?>">Siswa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Komunitas</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/agenda') ?>">Agenda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Raport <span class="sr-only">(current)</span></a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/kontak') ?>">Kontak</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Hubin</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/service') ?>">Service</a>
                 </li>
             </ul>
         </div>
@@ -58,23 +63,23 @@
     </center>
 
     <form action="<?= site_url('walikelas/raport/buat'); ?>" method="post" enctype="multipart/form-data">
-    <div class="pembungkus">
-        <div class="kertas mb-3">
-            <div class="row mb-5">
-                <div class="col-md-12">
-                    <span class="weight-field id-margin">Raport ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="id" id=""></span><br>
+        <div class="pembungkus">
+            <div class="kertas mb-3">
+                <div class="row mb-5">
+                    <div class="col-md-12">
+                        <span class="weight-field id-margin">Raport ID: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="id" id=""></span><br>
+                    </div>
                 </div>
-            </div>
-            <div class="row ml-1">
-                <span class="ml-5 weight-field">Nama Siswa: <input type="text" name="nama" id=""></span><br>
-                <span class="ml-4 weight-field">Judul Raport: &nbsp;&nbsp;&nbsp;<input type="text" name="judul" id=""></span><br><br>
-                <span class="ml-4 weight-field">Semester: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="semester" id=""></span><br>
-            </div>
-            <div class="row ml-1">
-                <span class="ml-5 mt-2 weight-field">NIS: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="nis" id=""></span><br>
-                <span class="ml-4 mt-2 weight-field">Kelas: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="kelas" id=""></span><br><br>
-                <span class="ml-4 mt-2 weight-field">Tahun Ajaran: <input type="text" name="tahun" id="tahun"></span><br>
-            </div>
+                <div class="row ml-1">
+                    <span class="ml-5 weight-field">Nama Siswa: <input type="text" name="nama" id=""></span><br>
+                    <span class="ml-4 weight-field">Judul Raport: &nbsp;&nbsp;&nbsp;<input type="text" name="judul" id=""></span><br><br>
+                    <span class="ml-4 weight-field">Semester: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="semester" id=""></span><br>
+                </div>
+                <div class="row ml-1">
+                    <span class="ml-5 mt-2 weight-field">NIS: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="nis" id=""></span><br>
+                    <span class="ml-4 mt-2 weight-field">Kelas: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="kelas" id=""></span><br><br>
+                    <span class="ml-4 mt-2 weight-field">Tahun Ajaran: <input type="text" name="tahun" id="tahun"></span><br>
+                </div>
                 <table>
                     <thead>
                         <tr>
@@ -102,7 +107,8 @@
                         </tr>
                         <tr>
                             <td data-label="No"><b>3</b></td>
-                            <td scope="row" data-label="Mata Pelajaran"><input type="text" name="mapel6" id=""></td></td>
+                            <td scope="row" data-label="Mata Pelajaran"><input type="text" name="mapel6" id=""></td>
+                            </td>
                             <td data-label="KKM"><input type="text" name="kkm6" id=""></td>
                             <td data-label="Nilai"><input type="text" name="nilai6" id=""></td>
                             <td data-label="Keterangan"><input type="text" name="keterangan6" id=""></td>
@@ -143,66 +149,64 @@
                             <td data-label="Keterangan"><input type="text" name="keterangan11" id=""></td>
                         </tr>
                     </tbody>
-                    </table>
-                    <table class="sikap">
-                        <thead>
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Aspek Sikap</th>
-                                <th scope="col">Nilai</th>
-                                <th scope="col">Keterangan</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td data-label="No"><b>1</b></td>
-                                <td scope="row" data-label="Aspek Sikap"><input type="text" name="aspek1" id=""></td>
-                                <td data-label="Nilai"><input type="text" name="nilai1" id=""></td>
-                                <td data-label="Keterangan"><input type="text" name="keterangan-sikap1" id=""></td>
-                            </tr>
-                            <tr>
-                                <td data-label="No"><b>2</b></td>
-                                <td scope="row" data-label="Aspek Sikap"><input type="text" name="aspek2" id=""></td>
-                                <td data-label="Nilai"><input type="text" name="nilai2" id=""></td>
-                                <td data-label="Keterangan"><input type="text" name="keterangan-sikap2" id=""></td>
-                            </tr>
-                            <tr>
-                                <td data-label="No"><b>3</b></td>
-                                <td scope="row" data-label="Aspek Sikap"><input type="text" name="aspek3" id=""></td>
-                                <td data-label="Nilai"><input type="text" name="nilai3" id=""></td>
-                                <td data-label="Keterangan"><input type="text" name="keterangan-sikap3" id=""></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="sikap">
-                        <thead>
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Kehadiran</th>
-                                <th scope="col">Jumlah</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td data-label="No"><b>1</b></td>
-                                <td scope="row" data-label="Kehadiran">Sakit</td>
-                                <td data-label="Jumlah"><input type="text" name="sakit" id=""></td>
-                            </tr>
-                            <tr>
-                                <td data-label="No"><b>2</b></td>
-                                <td scope="row" data-label="Kehadiran">Izin</td>
-                                <td data-label="Jumlah"><input type="text" name="izin" id=""></td>
-                            </tr>
-                            <tr>
-                                <td data-label="No"><b>3</b></td>
-                                <td scope="row" data-label="Kehadiran">Alfa</td>
-                                <td data-label="Jumlah"><input type="text" name="alfa" id=""></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+                </table>
+                <table class="sikap">
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Aspek Sikap</th>
+                            <th scope="col">Nilai</th>
+                            <th scope="col">Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="No"><b>1</b></td>
+                            <td scope="row" data-label="Aspek Sikap"><input type="text" name="aspek1" id=""></td>
+                            <td data-label="Nilai"><input type="text" name="nilai1" id=""></td>
+                            <td data-label="Keterangan"><input type="text" name="keterangan-sikap1" id=""></td>
+                        </tr>
+                        <tr>
+                            <td data-label="No"><b>2</b></td>
+                            <td scope="row" data-label="Aspek Sikap"><input type="text" name="aspek2" id=""></td>
+                            <td data-label="Nilai"><input type="text" name="nilai2" id=""></td>
+                            <td data-label="Keterangan"><input type="text" name="keterangan-sikap2" id=""></td>
+                        </tr>
+                        <tr>
+                            <td data-label="No"><b>3</b></td>
+                            <td scope="row" data-label="Aspek Sikap"><input type="text" name="aspek3" id=""></td>
+                            <td data-label="Nilai"><input type="text" name="nilai3" id=""></td>
+                            <td data-label="Keterangan"><input type="text" name="keterangan-sikap3" id=""></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="sikap">
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Kehadiran</th>
+                            <th scope="col">Jumlah</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="No"><b>1</b></td>
+                            <td scope="row" data-label="Kehadiran">Sakit</td>
+                            <td data-label="Jumlah"><input type="text" name="sakit" id=""></td>
+                        </tr>
+                        <tr>
+                            <td data-label="No"><b>2</b></td>
+                            <td scope="row" data-label="Kehadiran">Izin</td>
+                            <td data-label="Jumlah"><input type="text" name="izin" id=""></td>
+                        </tr>
+                        <tr>
+                            <td data-label="No"><b>3</b></td>
+                            <td scope="row" data-label="Kehadiran">Alfa</td>
+                            <td data-label="Jumlah"><input type="text" name="alfa" id=""></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        <center>
-            <button type="submit" name="submit" class="btn btn-success shadow float-right mr-4 mt-5 w-50 btn-lg">Buat Raport <i class="fas fa-plus-square"></i></button>
-        </center>
-    </form>
+        </div>
+        <button type="submit" name="submit" class="btn btn-success shadow mx-auto d-block mt-5 lebar-btn btn-lg">Buat Raport <i class="fas fa-plus-square"></i></button>
+    </form> 

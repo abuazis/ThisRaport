@@ -32,22 +32,22 @@
         <div class="collapse navbar-collapse putih" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto topnav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/dashboard') ?>">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Raport</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/raport') ?>">Raport</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Siswa</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/siswa') ?>">Siswa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Agenda</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/agenda') ?>">Agenda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Kontak</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/kontak') ?>">Kontak</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Service</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/service') ?>">Service</a>
                 </li>
             </ul>
         </div>

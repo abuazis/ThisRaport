@@ -19,28 +19,28 @@
                 <form action="<?= site_url('signup/walimurid/validation'); ?>" method="post" enctype="multipart/form-data">
                     <div class="upload-btn-wrapper">
                         <button class="btn">Add Photo <b>+</b></button>
-                        <input type="file" name="foto" id="foto">
+                        <input type="file" name="foto" id="foto" value="<?= set_value('foto') ?>">
                     </div>
                     <br>
                     <label for="nama">Nama Lengkap</label>
                         <small><?= form_error('nama'); ?></small>
-                        <input type="text" name="nama" id="nama" autocomplete="off">
+                        <input type="text" name="nama" id="nama" autocomplete="off" value="<?= set_value('nama') ?>">
                     <label for="gender">Gender</label>
                         <small><?= form_error('gender') ?></small>
                         <select name="gender" id="gender">
                             <option></option>
-                            <option value="Laki-Laki">Pria</option>
-                            <option value="Perempuan">Wanita</option>
+                            <option value="Laki-Laki" <?= set_value('Laki-Laki') ?>>Pria</option>
+                            <option value="Perempuan" <?= set_value('Perempuan') ?>>Wanita</option>
                         </select>
                     <label for="anak">Nama Anak</label>
                         <small><?= form_error('anak'); ?></small>
-                        <input type="text" name="anak" id="anak" autocomplete="off">
+                        <input type="text" name="anak" id="anak" autocomplete="off" value="<?= set_value('anak') ?>">
                     <label for="nis">NIS</label>
                         <small><?= form_error('nis'); ?></small>
-                        <input type="text" name="nis" id="nis" autocomplete="off">
+                        <input type="text" name="nis" id="nis" autocomplete="off" value="<?= set_value('nis') ?>">
                     <label for="alamat">Alamat Lengkap</label>
                         <small><?= form_error('alamat') ?></small>
-                        <input type="text" name="alamat" id="alamat" autocomplete="off">
+                        <input type="text" name="alamat" id="alamat" autocomplete="off" value="<?= set_value('alamat') ?>">
                     <button class="hijau" type="submit">SIGN UP!</button>
                 </form> 
                 <div class="punya">

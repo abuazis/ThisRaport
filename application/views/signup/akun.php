@@ -19,27 +19,27 @@
                 <form action="<?= site_url('signup/akun/validation'); ?>" method="post" enctype="multipart/form-data">
                     <label for="username">Username</label>
                         <small><?= form_error('username'); ?></small>
-                        <input type="text" name="username" id="username" autocomplete="off">
+                        <input type="text" name="username" id="username" autocomplete="off" value="<?= set_value('username') ?>">
                     <label for="level">Status</label>
                         <small><?= form_error('level'); ?></small>
                         <select name="level" id="level">
                             <option></option>
-                            <option value="walikelas">Walikelas</option>
-                            <option value="walimurid">Walimurid</option>
+                            <option value="walikelas" <?= set_select('level', 'walikelas') ?>>Walikelas</option>
+                            <option value="walimurid" <?= set_select('level', 'walimurid') ?>>Walimurid</option>
                         </select>
                     <label for="email">Email</label>
                         <small><?= form_error('email'); ?></small>
-                        <input type="text" name="email" id="email" autocomplete="off">
+                        <input type="text" name="email" id="email" autocomplete="off" value="<?= set_value('email') ?>">
                     <label for="password">Password</label>
                         <small><?= form_error('password'); ?></small>
-                        <input type="password" name="password" id="password">
+                        <input type="password" name="password" id="password" value="<?= set_value('password') ?>">
                     <label for="konfirmasi">Konfirmasi Password</label>
                         <small><?= form_error('konfirmasi'); ?></small>
-                        <input type="password" name="konfirmasi" id="konfirmasi">
+                        <input type="password" name="konfirmasi" id="konfirmasi" value="<?= set_value('konfirmasi') ?>">
                     <button class="hijau" type="submit">NEXT</button>
                 </form> 
                 <div class="punya">
-                    <p>Sudah Punya Akun?</p><a href="<?= site_url(''); ?>">SIGN IN</a>
+                    <p>Sudah Punya Akun?</p><a href="<?= site_url('signin/walimurid'); ?>">SIGN IN</a>
                 </div>
                 <div class="logo">
                     <img src="<?= base_url(); ?>assets/img/logo.jpg" width="50">

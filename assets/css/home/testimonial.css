@@ -8,43 +8,25 @@ body {
 }
 #testimonial {
     width: 100%;
-    min-height: 580px;
+    min-height: auto;
     background-color: #e1e1e1;
 }
 .container-testimonial {
+    width: 90%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     padding: 20px;
-    margin-top: 20px;
+    padding-bottom: 50px;
 }
 .testi {
-    margin-bottom: 50px;
     border-radius: 10px;
+    background-color: #48cbff;
+    height: 250px !important;
 }
 .testi p {
     margin: 20px;
     font-size: 13pt; 
     font-weight: 400;
     font-style: italic;
-}
-.testi:nth-child(1) {
-    width: 550px;
-    height: auto;
-    background-color: #ADE48C;
-}
-.testi:nth-child(2) {
-    width: 550px;
-    height: auto;
-    background-color: #C494DC;
-}
-.testi:nth-child(3) {
-    width: 550px;
-    height: auto;
-    background-color: #F59595;
-}
-.testi:nth-child(4) {
-    width: 550px;
-    height: auto;
-    background-color: #74CBF1;
 }

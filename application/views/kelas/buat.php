@@ -22,16 +22,16 @@
                 <form action="<?= site_url('kelas/buat/validation') ?>" method="post" enctype="multipart/form-data">
                     <label for="nama">Nama Kelas</label>
                         <small><?= form_error('nama'); ?></small>
-                        <input type="text" name="nama" id="nama" autocomplete="off">
+                        <input type="text" name="nama" id="nama" autocomplete="off" value="<?= set_value('nama') ?>">
                     <label for="walas">Nama Walikelas</label>
                         <small><?= form_error('walas'); ?></small>
-                        <input type="text" name="walas" id="walas" autocomplete="off">
+                        <input type="text" name="walas" id="walas" autocomplete="off" value="<?= set_value('walas') ?>">
                     <label for="kode">Kode Kelas</label>
                         <small><?= form_error('kode'); ?></small>
-                        <input type="text" name="kode" id="kode" autocomplete="off">
+                        <input type="text" name="kode" id="kode" autocomplete="off" value="<?= set_value('kode') ?>">
                     <label for="sekolah">Nama Sekolah</label>
                         <small><?= form_error('sekolah'); ?></small>
-                        <input type="text" name="sekolah" id="sekolah" autocomplete="off">
+                        <input type="text" name="sekolah" id="sekolah" autocomplete="off" value="<?= set_value('sekolah') ?>">
                     <button type="submit" class="w-100 h-btn">BUAT!</button>
                 </form>
                 <div class="punya">

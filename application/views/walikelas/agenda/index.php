@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="<?= base_url(); ?>assets/js/alert/sweetalert2.css">
-    
+
     <!-- Native CSS -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/agenda/agenda.css">
 
@@ -21,10 +22,14 @@
 
     <title>Simanis | Raport Digital</title>
 </head>
+
 <body>
     <!-- Ini Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark biru fixed-top ini">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand ml-4" href="javascript:window.history.go(-1);">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <a class="navbar-brand ml-0" href="<?= site_url(''); ?>">
             <img src="<?= base_url(); ?>assets/img/logo.jpg" width="50" class="d-inline-block" alt="">
             DIGITAL RAPORT
         </a>
@@ -35,56 +40,56 @@
         <div class="collapse navbar-collapse putih" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto topnav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/dashboard') ?>">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Absensi</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/raport') ?>">Raport</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Ekskul</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/siswa') ?>">Siswa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Komunitas</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/agenda') ?>">Agenda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Raport <span class="sr-only">(current)</span></a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/kontak') ?>">Kontak</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Hubin</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/service') ?>">Service</a>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="judul">
-            <center>
-                <h1>Agenda Pertemuan</h1>
-            </center>
-        </div>
-        <div class="agenda">
-            <div class="jadwal">
-                <h4>Jadwal Agenda Pertemuan Dengan Walimurid</h4>
-                <hr>
-                <?php foreach($agenda as $agd) : ?>
-                    <div class="jdwl mb-4">
-                        <img src="<?= base_url(); ?>assets/img/kalendar.png" width="180" class="">
-                        <div class="decs">
-                            <h4><?= $agd['judul_agenda']; ?></h4>
-                            <h5><?= $agd['hari_agenda'] ?>, <?= $agd['tanggal_agenda']; ?></h5>
-                            <h5><?= $agd['waktu_mulai']; ?> - <?= $agd['waktu_selesai']; ?></h5>
-                            <h5 class="font-weight-bold"><?= $agd['lokasi_agenda']; ?></h5>
-                        </div>
-                        <a href="<?= site_url('walikelas/agenda/hapus/').$agd['id']; ?>" class="btn btn-danger text-light jarak float-right ml-1 hapus tombol-hapus">Hapus    <i class="far fa-trash-alt"></i></a>
-                        <a href="<?= site_url('walikelas/agenda/update/').$agd['id']; ?>" class="btn btn-warning text-light jarak float-right edit">Edit      <i class="fas fa-edit"></i></a>
-                    </div>
-                <?php endforeach; ?>
-                <a href="<?= site_url('walikelas/agenda/buat'); ?>">
-                    <button type="button" class="btn btn-primary float-right marge shadow"><b>Tambah Agenda +</b></button>
-                </a>
+        <center>
+            <h1>Agenda Pertemuan</h1>
+        </center>
+    </div>
+    <div class="agenda">
+        <div class="jadwal">
+            <h4>Jadwal Agenda Pertemuan Dengan Walimurid</h4>
+            <hr>
+            <?php foreach ($agenda as $agd) : ?>
+            <div class="jdwl mb-4">
+                <img src="<?= base_url(); ?>assets/img/kalendar.png" width="180" class="ml-3 mr-3">
+                <div class="decs">
+                    <h4><?= $agd['judul_agenda']; ?></h4>
+                    <h5><?= $agd['hari_agenda'] ?>, <?= $agd['tanggal_agenda']; ?></h5>
+                    <h5><?= $agd['waktu_mulai']; ?> - <?= $agd['waktu_selesai']; ?></h5>
+                    <h5 class="font-weight-bold"><?= $agd['lokasi_agenda']; ?></h5>
+                </div>
+                <a href="<?= site_url('walikelas/agenda/hapus/') . $agd['id']; ?>" class="btn btn-danger text-light jarak float-right ml-1 hapus tombol-hapus">Hapus <i class="far fa-trash-alt"></i></a>
+                <a href="<?= site_url('walikelas/agenda/update/') . $agd['id']; ?>" class="btn btn-warning text-light jarak float-right edit">Edit <i class="fas fa-edit"></i></a>
             </div>
-            <div class="notif">
+            <?php endforeach; ?>
+            <a href="<?= site_url('walikelas/agenda/buat'); ?>">
+                <button type="button" class="btn btn-primary float-right marge shadow"><b>Tambah Agenda +</b></button>
+            </a>
+        </div>
+        <!-- <div class="notif">
                 <h4>Timeline</h4>
                 <hr>
-                <?php if($this->session->userdata('agenda_walas_berhasil') == TRUE) : ?>
+                <?php if ($this->session->userdata('agenda_walas_berhasil') == true) : ?>
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                         <strong>Agenda Baru</strong><br><?= $this->session->userdata('agenda_walas_berhasil'); ?>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -92,7 +97,7 @@
                         </button>
                     </div>
                 <?php endif; ?>
-                <?php if($this->session->userdata('agenda_walas_hapus') == TRUE) : ?>
+                <?php if ($this->session->userdata('agenda_walas_hapus') == true) : ?>
                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
                         <strong>Agenda Dihapus</strong><br><?= $this->session->userdata('agenda_walas_hapus'); ?>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -100,7 +105,7 @@
                         </button>
                     </div>
                 <?php endif; ?>
-                <?php if($this->session->userdata('agenda_walas_edit') == TRUE) : ?>
+                <?php if ($this->session->userdata('agenda_walas_edit') == true) : ?>
                     <div class="alert alert-primary alert-dismissible fade show" role="alert">
                         <strong>Agenda Diubah</strong><br><?= $this->session->userdata('agenda_walas_edit'); ?>
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -108,6 +113,7 @@
                         </button>
                     </div>
                 <?php endif; ?>
-                <div class="flash-data" data-flashdata="<?= $this->session->flashdata('agenda_walas_berhasil'); ?>"></div>
-            </div>
-        </div>
+            </div> -->
+        <div class="flash-data" data-flashdata="<?= $this->session->flashdata('agenda_walas_berhasil'); ?>"></div>
+        <div class="flash-ubah" data-flashdata="<?= $this->session->flashdata('agenda_walas_edit'); ?>"></div>
+    </div> 

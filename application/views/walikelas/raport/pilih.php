@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap/bootstrap.css">
-    
+
     <!-- Native CSS -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/raport/pilih.css">
 
@@ -17,10 +18,14 @@
 
     <title><?= $judul; ?></title>
 </head>
+
 <body>
     <!-- Ini Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark biru fixed-top ini">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand ml-4" href="javascript:window.history.go(-1);">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <a class="navbar-brand ml-0" href="<?= site_url(''); ?>">
             <img src="<?= base_url(); ?>assets/img/logo.jpg" width="50" class="d-inline-block" alt="">
             DIGITAL RAPORT
         </a>
@@ -31,22 +36,22 @@
         <div class="collapse navbar-collapse putih" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto topnav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/dashboard') ?>">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Absensi</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/raport') ?>">Raport</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Ekskul</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/siswa') ?>">Siswa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Komunitas</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/agenda') ?>">Agenda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Raport <span class="sr-only">(current)</span></a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/kontak') ?>">Kontak</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Hubin</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/service') ?>">Service</a>
                 </li>
             </ul>
         </div>
@@ -66,10 +71,10 @@
     </div>
     <div class="plastik">
         <div class="rapor">
-            <?php foreach($raport as $rpt) : ?>
+            <?php foreach ($raport as $rpt) : ?>
             <div class="rapo">
                 <center>
-                    <a href="<?= site_url('walikelas/data/hasil/').$rpt['raport_id']; ?>"><img src="<?= base_url(); ?>assets/img/buku.png" width="250" class="mt-3"></a>
+                    <a href="<?= site_url('walikelas/data/hasil/') . $rpt['raport_id']; ?>"><img src="<?= base_url(); ?>assets/img/buku.png" width="250" class="mt-3"></a>
                     <h3><?= $rpt['judul_raport']; ?></h3>
                     <p><?= $siswa['kelas']; ?> <?= $siswa['nama_siswa']; ?></p>
                 </center>
@@ -100,4 +105,4 @@
                 </form>
             </div>
         </div>
-    </div> -->
+    </div> --> 

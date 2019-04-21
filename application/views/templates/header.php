@@ -14,7 +14,9 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/home/testimonial.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/home/join.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/home/footer.css">
-    <link href="<?= base_url(); ?>assets/css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/aos.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/slick/slick-theme.css"/>
 
     <!-- Icon -->
     <link rel="shortcut icon" href="<?= base_url(); ?>assets/img/logo.jpg" type="image/x-icon">
@@ -43,16 +45,16 @@
                         <a class="nav-link active" href="#">Raport</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Siswa</a>
+                        <a class="nav-link active" href="#">Absensi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Agenda</a>
+                        <a class="nav-link active" href="#">Ekskul</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Kontak</a>
+                        <a class="nav-link active" href="#">Hubin</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Service</a>
+                        <a class="nav-link active" href="#">Komunitas</a>
                     </li>
                 </ul>
             </div>

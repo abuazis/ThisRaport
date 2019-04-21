@@ -20,7 +20,7 @@ class Siswa extends CI_Controller {
         } else {
             $config['base_url'] = site_url('walikelas/siswa/index'); 
             $config['total_rows'] = $this->db->count_all('tbl_siswa'); 
-            $config['per_page'] = 2; 
+            $config['per_page'] = 12; 
             $config["uri_segment"] = 4; 
             $choice = $config["total_rows"] / $config["per_page"];
             $config["num_links"] = floor($choice);
@@ -75,8 +75,8 @@ class Siswa extends CI_Controller {
         $this->form_validation->set_rules('sekolah', 'Sekolah', 'required|max_length[50]');
 
         if ($this->form_validation->run() == TRUE) {
+            $this->session->set_flashdata('siswa_tambah', 'Anda baru saja menambahkan data siswa');
             $this->Siswa_Model->tambahSiswa();
-            $this->session->set_flashdata('siswa_berhasil', 'Anda baru saja menambahkan data siswa');
             redirect('walikelas/siswa');
         } else {
             $this->load->view('walikelas/siswa/tambah', $data);

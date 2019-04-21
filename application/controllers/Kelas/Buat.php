@@ -1,26 +1,30 @@
 <?php
 
-class Buat extends CI_Controller {
+class Buat extends CI_Controller
+{
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model('Kelas/Buat_Model');
-        check_session_walas();        
+        check_session_walas();
     }
 
-    public function index() {
+    public function index()
+    {
         $data['judul'] = 'BUAT KELAS | SIMANIS';
-        $this->load->view('kelas/buat');
+        $this->load->view('kelas/buat', $data);
     }
 
-    public function validation() {
+    public function validation()
+    {
         $this->form_validation->set_rules('nama', 'Nama Kelas', 'required|min_length[2]|max_length[10]');
         $this->form_validation->set_rules('walas', 'Nama Walas', 'required|min_length[3]|max_length[50]');
         $this->form_validation->set_rules('kode', 'Kode Kelas', 'required|exact_length[6]');
         $this->form_validation->set_rules('sekolah', 'Nama Sekolah', 'required|min_length[5]');
 
-        if($this->form_validation->run() == TRUE) {
+        if ($this->form_validation->run() == true) {
             $data_kelas = [
                 'kode_kelas' => $this->input->post('kode'),
                 'kelas_in' => 'kelas'
@@ -33,7 +37,5 @@ class Buat extends CI_Controller {
             $this->index();
         }
     }
-
 }
-
-?>
+ 

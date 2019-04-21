@@ -8,6 +8,15 @@ if( flashData ) {
 	})	
 }
 
+const flashUbah = $('.flash-ubah').data('flashdata');
+if( flashUbah ) {
+	Swal({
+		title: 'Berhasil',
+		text: flashUbah,
+		type: 'success'
+	})	
+}
+
 // tombol hapus
 $('.tombol-hapus').on('click', function(e) {
 	e.preventDefault();

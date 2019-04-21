@@ -50,6 +50,7 @@
     <script src="<?= base_url(); ?>assets/js/bootstrap.min.js" ></script>
     <script src="<?= base_url(); ?>assets/js/alert/sweetalert2.all.min.js"></script>
     <script src="<?= base_url(); ?>assets/js/alert/script.js"></script>
+    <script src="<?= base_url(); ?>assets/js/slick/slick.min.js"></script>
     <script>
         AOS.init();
         $(window).scroll(function () {
@@ -58,6 +59,14 @@
             } else {
                 $('.navku').css('background','transparent');
             }
+        });
+    </script>
+    <script>
+        $('.container-testimonial').slick({
+            infinite: true,
+            slidesToShow: 2,
+            autoplay: true,
+            autoplaySpeed: 2000
         });
     </script>
     

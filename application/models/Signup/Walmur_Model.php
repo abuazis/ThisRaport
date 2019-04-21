@@ -1,8 +1,10 @@
 <?php
 
-class Walmur_Model extends CI_Model {
+class Walmur_Model extends CI_Model
+{
 
-    public function tambahWalmur() {
+    public function tambahWalmur()
+    {
         $data = [
             "nama_lengkap" => $this->input->post('nama', true),
             "username" => $this->session->userdata('username'),
@@ -14,23 +16,21 @@ class Walmur_Model extends CI_Model {
 
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'jpg|jpeg|png';
-        $config['file_name'] = $this->input->post('nama_lengkap');
+        $config['file_name'] = uniqid() . time();
 
         $this->load->library('upload', $config);
 
-        if( ! $this->upload->do_upload('foto') ) {
+        if (!$this->upload->do_upload('foto')) {
             $error = ['error' => $this->upload->display_errors()];
             $this->load->view('signup/walikelas', $error);
         } else {
             $upload_data = $this->upload->data();
             $file_name = $upload_data['file_name'];
-            $data['foto'] = 'uploads/'.$file_name;
-            if($this->db->insert('tbl_walmur', $data)) {
+            $data['foto'] = 'uploads/' . $file_name;
+            if ($this->db->insert('tbl_walmur', $data)) {
                 redirect('kelas/masuk');
             }
         }
     }
-
 }
-
-?>
+ 

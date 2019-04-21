@@ -1,8 +1,10 @@
 <?php
 
-class Dashboard extends CI_Controller {
+class Dashboard extends CI_Controller
+{
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         $this->load->helper('cookie');
         $this->load->library('form_validation');
@@ -10,16 +12,17 @@ class Dashboard extends CI_Controller {
         check_session_user_walmur();
     }
 
-    public function index() {
+    public function index()
+    {
         $data['judul'] = 'Dashboard | Simanis';
         $data['walimurid'] = $this->Dashboard_Model->getProfil();
         $data['kelas'] = $this->Dashboard_Model->getKelas();
-        $this->load->view('templates/navbar', $data);
         $this->load->view('walimurid/dashboard/index', $data);
         $this->load->view('templates/footer');
     }
 
-    public function update($id) {
+    public function update($id)
+    {
         $data['judul'] = 'Ubah Profil | Simanis';
         $data['walimurid'] = $this->Dashboard_Model->getProfilById($id);
         $data['gender'] = ['Laki-Laki', 'Perempuan'];
@@ -30,7 +33,7 @@ class Dashboard extends CI_Controller {
         $this->form_validation->set_rules('nis', 'NIS', 'required|exact_length[9]');
         $this->form_validation->set_rules('alamat', 'Alamat', 'required');
 
-        if($this->form_validation->run() == TRUE) {
+        if ($this->form_validation->run() == true) {
             $this->Dashboard_Model->ubahProfil();
             $this->session->set_flashdata('flash', 'Diubah');
             $this->session->set_flashdata('ubah_walmur', 'Anda baru saja mengubah profil anda');
@@ -41,12 +44,11 @@ class Dashboard extends CI_Controller {
         }
     }
 
-    public function logout() {
+    public function logout()
+    {
         $this->session->sess_destroy();
         delete_cookie('on');
         redirect('');
     }
-
 }
-
-?>
+ 

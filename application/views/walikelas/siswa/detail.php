@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap/bootstrap.css">
-    
+
     <!-- Native CSS -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/siswa/detail.css">
 
@@ -18,10 +19,14 @@
 
     <title><?= $judul; ?></title>
 </head>
+
 <body>
     <!-- Ini Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark biru fixed-top ini">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand ml-4" href="javascript:window.history.go(-1);">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <a class="navbar-brand ml-0" href="<?= site_url(''); ?>">
             <img src="<?= base_url(); ?>assets/img/logo.jpg" width="50" class="d-inline-block" alt="">
             DIGITAL RAPORT
         </a>
@@ -32,22 +37,22 @@
         <div class="collapse navbar-collapse putih" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto topnav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/dashboard') ?>">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Absensi</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/raport') ?>">Raport</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Ekskul</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/siswa') ?>">Siswa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Komunitas</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/agenda') ?>">Agenda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Raport <span class="sr-only">(current)</span></a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/kontak') ?>">Kontak</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Hubin</a>
+                    <a class="nav-link active" href="<?= site_url('walikelas/service') ?>">Service</a>
                 </li>
             </ul>
         </div>
@@ -55,52 +60,52 @@
 
     <div class="pembungkus">
         <div class="kertas">
-            <h3 class="ml-3">Detail Data Siswa</h3> 
+            <h3 class="ml-3">Detail Data Siswa</h3>
             <hr width="98%">
             <div class="row">
-          <div class="col-sm-4 mt-5">
-              <center>
-                <img src="<?= base_url().$siswa['foto']; ?>" class="img-thumbnail" width="300">
-              </center>
-          </div>
-          <div class="col-sm-7">
-            <table class="table mt-5">
-              <tr>
-                <th scope="row" class="text-left">Nama Siswa</th>
-                <td scope="row" class="text-left"><?= $siswa['nama_siswa']; ?></td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-left">NIS</th>
-                <td scope="row" class="text-left"><?= $siswa['nis']; ?></td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-left">Nama Ortu</th>
-                <td scope="row" class="text-left"><?= $siswa['nama_ortu']; ?></td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-left">Jenis Kelamin</th>
-                <td scope="row" class="text-left"><?= $siswa['gender']; ?></td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-left">Tanggal Lahir</th>
-                <td scope="row" class="text-left"><?= $siswa['tanggal_lahir']; ?></td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-left">Alamat</th>
-                <td scope="row" class="text-left"><?= $siswa['alamat']; ?></td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-left">Kelas</th>
-                <td scope="row" class="text-left"><?= $siswa['kelas']; ?></td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-left">Sekolah</th>
-                <td scope="row" class="text-left"><?= $siswa['sekolah']; ?></td>
-              </tr>
-            </table>
-            <a href="<?= site_url('walikelas/siswa/update/').$siswa['id']; ?>" class="text-decoration-none"><button type="button" class="btn btn-primary btn-lg btn-block mt-4 text-decoration-none"><i class="fas fa-edit"></i></button></a>
-            <a href="<?= site_url('walikelas/siswa/hapus/').$siswa['id']; ?>" class="text-decoration-none"><button type="button" class="btn btn-danger btn-lg btn-block mt-3 text-decoration-none tombol-hapus"><i class="fas fa-trash"></i></button></a>
-          </div>
+                <div class="col-sm-4 mt-5">
+                    <center>
+                        <img src="<?= base_url() . $siswa['foto']; ?>" class="img-thumbnail" width="300">
+                    </center>
+                </div>
+                <div class="col-sm-7">
+                    <table class="table mt-5">
+                        <tr>
+                            <th scope="row" class="text-left">Nama Siswa</th>
+                            <td scope="row" class="text-left"><?= $siswa['nama_siswa']; ?></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-left">NIS</th>
+                            <td scope="row" class="text-left"><?= $siswa['nis']; ?></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-left">Nama Ortu</th>
+                            <td scope="row" class="text-left"><?= $siswa['nama_ortu']; ?></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-left">Jenis Kelamin</th>
+                            <td scope="row" class="text-left"><?= $siswa['gender']; ?></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-left">Tanggal Lahir</th>
+                            <td scope="row" class="text-left"><?= $siswa['tanggal_lahir']; ?></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-left">Alamat</th>
+                            <td scope="row" class="text-left"><?= $siswa['alamat']; ?></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-left">Kelas</th>
+                            <td scope="row" class="text-left"><?= $siswa['kelas']; ?></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-left">Sekolah</th>
+                            <td scope="row" class="text-left"><?= $siswa['sekolah']; ?></td>
+                        </tr>
+                    </table>
+                    <a href="<?= site_url('walikelas/siswa/update/') . $siswa['id']; ?>" class="text-decoration-none"><button type="button" class="btn btn-primary btn-lg btn-block mt-4 text-decoration-none"><i class="fas fa-edit"></i></button></a>
+                    <a href="<?= site_url('walikelas/siswa/hapus/') . $siswa['id']; ?>" class="text-decoration-none"><button type="button" class="btn btn-danger btn-lg btn-block mt-3 text-decoration-none tombol-hapus"><i class="fas fa-trash"></i></button></a>
+                </div>
+            </div>
         </div>
-        </div>
-    </div>
+    </div> 

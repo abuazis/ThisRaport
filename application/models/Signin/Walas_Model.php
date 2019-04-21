@@ -1,19 +1,19 @@
 <?php
 
-class Walas_Model extends CI_Model {
+class Walas_Model extends CI_Model
+{
 
-    function cekLogin($username, $password) {
-        $this->db->where('username', $username);
-        $query = $this->db->get('tbl_akun');
-        $result = $query->row_array();
+    function cekLogin($username, $password)
+    {
+        $result = $this->db->get_where('tbl_akun', ['username' => $username])->row_array();
 
-        if(!empty($result) && password_verify($password, $result['password'])) {
-            return true;
-        } else {
-            return false;
-        }
+        if($result) {
+            if($result['level'] == 'walikelas') {
+                if(password_verify($password, $result['password'])) {
+                    return true;
+                } 
+            } 
+        } 
     }
-
 }
-
-?>
+ 

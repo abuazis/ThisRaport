@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +10,24 @@
 
     <title>Sign In | Simanis</title>
 </head>
+
 <body>
     <div class="container">
         <div class="sign-box">
             <center>
                 <div class="judul">
-                    <h2>SIGN IN WALIMURID</h2>
+                    <h2>SIGN IN TO DASHBOARD</h2>
                     <img src="<?= base_url(); ?>assets/img/logo.jpg" width="180">
                     <h2 class="digital">DIGITAL RAPORT</h2>
                 </div>
                 <form action="<?= site_url('signin/walimurid/validation'); ?>" method="post" class="">
                     <label for="username">Username</label>
                         <?= form_error('username'); ?>
-                        <input type="text" name="username" id="username">
+                        <input type="text" name="username" id="username" value="<?= set_value('username') ?>">
                     <label for="password">Password</label>
                         <?= form_error('password'); ?>
                         <small><?= $this->session->flashdata('error'); ?></small>
-                        <input type="password" name="password" id="password">
+                        <input type="password" name="password" id="password" value="<?= set_value('password') ?>">
                     <label for="remember">
                         <input type="checkbox" name="remember" id="remember"> Remember Me
                     </label>
@@ -40,4 +42,5 @@
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 </body>
-</html>
+
+</html> 

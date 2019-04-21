@@ -47,9 +47,13 @@ span {
 	font-weight: 600;
 }
 input[type="text"] {
-	border: 1px solid rgb(75, 75, 75);
+	border: 1px solid rgb(143, 143, 143);
 	border-radius: 3px;
 	padding: 2px 0px 2px 5px;
+}
+.lebar-btn {
+	margin-top: 80px !important;
+	width: 95% !important;
 }
 .id-margin {
 	margin-left: 30rem;
@@ -61,7 +65,7 @@ footer {
   	flex-flow: row wrap;
   	padding-top: 50px;
     justify-content: center;
-    margin-top: 110px;
+    margin-top:80px;
 }
 .konten1{
 	float: left;

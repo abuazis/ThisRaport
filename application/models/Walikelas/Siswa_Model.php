@@ -1,8 +1,10 @@
 <?php
 
-class Siswa_Model extends CI_Model {
+class Siswa_Model extends CI_Model
+{
 
-    function getSiswa($limit, $start){
+    function getSiswa($limit, $start)
+    {
         $this->db->select('id, nama_siswa, nis, nama_ortu');
         $this->db->from('tbl_siswa');
         $this->db->where('kode_kelas', $this->session->userdata('kode_kelas'));
@@ -11,11 +13,13 @@ class Siswa_Model extends CI_Model {
         return $result;
     }
 
-    function getSiswaById($id) {
+    function getSiswaById($id)
+    {
         return $this->db->get_where('tbl_siswa', ['id' => $id])->row_array();
     }
 
-    function tambahSiswa() {
+    function tambahSiswa()
+    {
         $data = [
             "kode_kelas" => $this->session->userdata('kode_kelas'),
             "nama_siswa" => $this->input->post('nama', true),
@@ -30,28 +34,30 @@ class Siswa_Model extends CI_Model {
 
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'jpg|jpeg|png';
-        $config['file_name'] = $this->input->post('nis');
+        $config['file_name'] = uniqid() . time();
 
         $this->load->library('upload', $config);
 
-        if( ! $this->upload->do_upload('foto') ) {
+        if (!$this->upload->do_upload('foto')) {
             $error = ['error' => $this->upload->display_errors()];
             $this->load->view('walikelas/siswa/tambah', $error);
         } else {
             $upload_data = $this->upload->data();
             $file_name = $upload_data['file_name'];
-            $data['foto'] = 'uploads/'.$file_name;
-            if($this->db->insert('tbl_siswa', $data)) {
+            $data['foto'] = 'uploads/' . $file_name;
+            if ($this->db->insert('tbl_siswa', $data)) {
                 redirect('walikelas/siswa');
             }
         }
     }
 
-    function hapusSiswa($id) {
+    function hapusSiswa($id)
+    {
         $this->db->delete('tbl_siswa', ['id' => $id]);
     }
 
-    function ubahSiswa() {
+    function ubahSiswa()
+    {
         $data = [
             "kode_kelas" => $this->session->userdata('kode_kelas'),
             "nama_siswa" => $this->input->post('nama', true),
@@ -66,19 +72,19 @@ class Siswa_Model extends CI_Model {
 
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'jpg|jpeg|png';
-        $config['file_name'] = $this->input->post('nis');
+        $config['file_name'] = uniqid().time();
 
         $this->load->library('upload', $config);
 
-        if( ! $this->upload->do_upload('foto') ) {
+        if (!$this->upload->do_upload('foto')) {
             $error = ['error' => $this->upload->display_errors()];
             $this->load->view('walikelas/siswa/ubah', $error);
         } else {
             $upload_data = $this->upload->data();
             $file_name = $upload_data['file_name'];
-            $data['foto'] = 'uploads/'.$file_name;
+            $data['foto'] = 'uploads/' . $file_name;
             $this->db->where('id', $this->input->post('id'));
-            if($this->db->update('tbl_siswa', $data)) {
+            if ($this->db->update('tbl_siswa', $data)) {
                 redirect('walikelas/siswa');
             }
         }
@@ -86,7 +92,8 @@ class Siswa_Model extends CI_Model {
         $this->db->update('tbl_siswa', $data);
     }
 
-    function cariSiswa() {
+    function cariSiswa()
+    {
         $keyword = $this->input->post('cari', true);
         $this->db->like('nama_siswa', $keyword);
         $this->db->or_like('nis', $keyword);
@@ -98,8 +105,5 @@ class Siswa_Model extends CI_Model {
         $this->db->or_like('sekolah', $keyword);
         return $this->db->get('tbl_siswa')->result_array();
     }
-
-
 }
-
-?>
+ 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap/bootstrap.css">
-    
+
     <!-- Native CSS -->
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/raport/data.css">
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/raport/table.css">
@@ -18,10 +19,14 @@
 
     <title><?= $judul; ?></title>
 </head>
+
 <body>
     <!-- Ini Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark biru fixed-top ini">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand ml-4" href="javascript:window.history.go(-1);">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <a class="navbar-brand ml-0" href="<?= site_url(''); ?>">
             <img src="<?= base_url(); ?>assets/img/logo.jpg" width="50" class="d-inline-block" alt="">
             DIGITAL RAPORT
         </a>
@@ -32,22 +37,19 @@
         <div class="collapse navbar-collapse putih" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto topnav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link active" href="<?= site_url('walimurid/dashboard') ?>">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Absensi</a>
+                    <a class="nav-link active" href="<?= site_url('walimurid/raport/index/') ?>">Raport</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Ekskul</a>
+                    <a class="nav-link active" href="<?= site_url('walimurid/agenda') ?>">Agenda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Komunitas</a>
+                    <a class="nav-link active" href="<?= site_url('walimurid/kontak') ?>">Kontak</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Raport <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Hubin</a>
+                    <a class="nav-link active" href="<?= site_url('walimurid/service') ?>">Service</a>
                 </li>
             </ul>
         </div>
@@ -56,9 +58,9 @@
     <div class="pembungkus">
         <div class="kertas">
             <center>
-                <h1>Data Raport <?= $biodata['nama_siswa']; ?></h1> 
+                <h1>Data Raport <?= $biodata['nama_siswa']; ?></h1>
             </center>
-              <table>
+            <table>
                 <thead>
                     <tr>
                         <th scope="col">No</th>
@@ -69,67 +71,67 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php $no=1; ?>
-                    <?php foreach($raport as $rpt) : ?>
-                        <tr>
-                            <td data-label="No"><b><?= $no; ?></b></td>
-                            <td scope="row" data-label="Mata Pelajaran"><?= $rpt['nama_mapel']; ?></td>
-                            <td data-label="KKM"><?= $rpt['kkm']; ?></td>
-                            <td data-label="Nilai"><?= $rpt['nilai']; ?></td>
-                            <td data-label="Keterangan"><?= $rpt['keterangan']; ?></td>
-                        </tr>
+                    <?php $no = 1; ?>
+                    <?php foreach ($raport as $rpt) : ?>
+                    <tr>
+                        <td data-label="No"><b><?= $no; ?></b></td>
+                        <td scope="row" data-label="Mata Pelajaran"><?= $rpt['nama_mapel']; ?></td>
+                        <td data-label="KKM"><?= $rpt['kkm']; ?></td>
+                        <td data-label="Nilai"><?= $rpt['nilai']; ?></td>
+                        <td data-label="Keterangan"><?= $rpt['keterangan']; ?></td>
+                    </tr>
                     <?php $no++; ?>
                     <?php endforeach; ?>
                 </tbody>
-                </table>
-                <table class="sikap">
-                    <thead>
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Aspek Sikap</th>
-                            <th scope="col">Nilai</th>
-                            <th scope="col">Keterangan</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php $no=1; ?>
-                        <?php foreach($sikap as $skp) : ?>
-                            <tr>
-                                <td data-label="No"><b><?= $no; ?></b></td>
-                                <td scope="row" data-label="Aspek Sikap"><?= $skp['aspek_sikap']; ?></td>
-                                <td data-label="Nilai"><?= $skp['nilai']; ?></td>
-                                <td data-label="Keterangan"><?= $skp['keterangan']; ?></td>
-                            </tr>
-                        <?php $no++; ?>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-                <table class="sikap">
-                    <thead>
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">Kehadiran</th>
-                            <th scope="col">Jumlah</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-label="No"><b>1</b></td>
-                            <td scope="row" data-label="Kehadiran">Sakit</td>
-                            <td data-label="Jumlah"><?= $kehadiran['sakit']; ?></td>
-                        </tr>
-                        <tr>
-                            <td data-label="No"><b>2</b></td>
-                            <td scope="row" data-label="Kehadiran">Izin</td>
-                            <td data-label="Jumlah"><?= $kehadiran['izin']; ?></td>
-                        </tr>
-                        <tr>
-                            <td data-label="No"><b>3</b></td>
-                            <td scope="row" data-label="Kehadiran">Alfa</td>
-                            <td data-label="Jumlah"><?= $kehadiran['alfa']; ?></td>
-                        </tr>
-                    </tbody>
-                </table>
+            </table>
+            <table class="sikap">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Aspek Sikap</th>
+                        <th scope="col">Nilai</th>
+                        <th scope="col">Keterangan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php $no = 1; ?>
+                    <?php foreach ($sikap as $skp) : ?>
+                    <tr>
+                        <td data-label="No"><b><?= $no; ?></b></td>
+                        <td scope="row" data-label="Aspek Sikap"><?= $skp['aspek_sikap']; ?></td>
+                        <td data-label="Nilai"><?= $skp['nilai']; ?></td>
+                        <td data-label="Keterangan"><?= $skp['keterangan']; ?></td>
+                    </tr>
+                    <?php $no++; ?>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            <table class="sikap">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Kehadiran</th>
+                        <th scope="col">Jumlah</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="No"><b>1</b></td>
+                        <td scope="row" data-label="Kehadiran">Sakit</td>
+                        <td data-label="Jumlah"><?= $kehadiran['sakit']; ?></td>
+                    </tr>
+                    <tr>
+                        <td data-label="No"><b>2</b></td>
+                        <td scope="row" data-label="Kehadiran">Izin</td>
+                        <td data-label="Jumlah"><?= $kehadiran['izin']; ?></td>
+                    </tr>
+                    <tr>
+                        <td data-label="No"><b>3</b></td>
+                        <td scope="row" data-label="Kehadiran">Alfa</td>
+                        <td data-label="Jumlah"><?= $kehadiran['alfa']; ?></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-    <a href="<?= site_url('walikelas/data/cetak/').$biodata['raport_id']; ?>" class="btn btn-success btn-lg float-right mt-3 mr-5 margen"><i class="fa fa-download" aria-hidden="true"></i> Unduh Raport</a>
+    <a href="<?= site_url('walikelas/data/cetak/') . $biodata['raport_id']; ?>" class="btn btn-success btn-lg float-right mt-3 mr-5 margen"><i class="fa fa-download" aria-hidden="true"></i> Unduh Raport</a> 

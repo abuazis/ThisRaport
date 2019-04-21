@@ -22,7 +22,7 @@
                 <form action="<?= site_url('kelas/masuk/validation'); ?>" method="post" enctype="multipart/form-data">
                         <label for="kode">Kode Kelas</label>
                         <small><?= form_error('kode'); ?></small>
-                        <input type="text" name="kode" id="kode">
+                        <input type="text" name="kode" id="kode" value="<?= set_value('kode') ?>">
                     <button type="submit" class="btn-block">MASUK!</button>
                 </form>
             </center>

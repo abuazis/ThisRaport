@@ -22,6 +22,7 @@
             text-align: left;
             text-shadow: 1px 1px 1px #fff;
             text-align: center;
+            background-color: grey;
         }
         .zui-table tbody td {
             border: solid 2px #333;
